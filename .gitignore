@@ -1,0 +1,5 @@
+# Keep compiled PDFs out of the distribution repository.
+*.[pP][dD][fF]
+
+# Never publish solution files or directories, regardless of case.
+*-[sS][oO][lL][uU][tT][iI][oO][nN][sS]*

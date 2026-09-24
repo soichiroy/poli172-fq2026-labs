@@ -1,0 +1,38 @@
+#!/usr/bin/env python3
+"""Reject private solution paths and PDFs in the proposed commit."""
+
+import os
+import subprocess
+import sys
+
+
+def main():
+    try:
+        result = subprocess.run(
+            ["git", "ls-files", "--cached", "-z"],
+            check=True,
+            stdout=subprocess.PIPE,
+        )
+    except subprocess.CalledProcessError:
+        print("Cannot inspect the Git index; commit blocked.", file=sys.stderr)
+        return 1
+
+    blocked = []
+    for path in result.stdout.split(b"\0"):
+        if not path:
+            continue
+        normalized = path.lower()
+        if b"-solutions" in normalized or normalized.endswith(b".pdf"):
+            blocked.append(os.fsdecode(path))
+
+    if blocked:
+        print("Commit blocked: PDFs and '-solutions' paths are not allowed.", file=sys.stderr)
+        for path in blocked:
+            print(f"  {path!r}", file=sys.stderr)
+        print("Remove these files from the index; keep them in ForInstructor.", file=sys.stderr)
+        return 1
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
