@@ -54,8 +54,7 @@ the chunk around `1 + 3` above: it opens with three backticks and an r in
 braces, and closes with three backticks.
 
 - **Code:** Inside each exercise chunk, replace `# YOUR CODE HERE` with R
-  commands. Change `#| eval: false` to `#| eval: true` when the chunk is
-  complete. Complete and enable earlier chunks first. Keep backticks and
+  commands. Complete and enable earlier chunks first. Keep backticks and
   `#| label:` lines unchanged.
 - **Written answers:** Outside chunks, replace `[Your answer here]` with
   ordinary sentences. Markdown adds formatting: `**bold**` makes text bold;
