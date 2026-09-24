@@ -88,7 +88,7 @@ Use R to calculate both expressions below, on separate lines:
 ```{r}
 #| label: exercise-2-1-calculator
 #| echo: true
-#| eval: false
+#| eval: true
 # YOUR CODE HERE
 ```
 
@@ -109,7 +109,7 @@ put its name inside `mean()`.
 ```{r}
 #| label: exercise-2-2-vector-mean
 #| echo: true
-#| eval: false
+#| eval: true
 x <- c(10, 8, 12)
 # YOUR CODE HERE
 ```
@@ -118,7 +118,6 @@ x <- c(10, 8, 12)
 
 [Your answer here]
 
-\newpage
 
 # Part 3: Load election data
 
@@ -145,7 +144,7 @@ Load `elections.csv` using `read.csv()` and store it in an object named
 ```{r}
 #| label: exercise-3-1-load-preview
 #| echo: true
-#| eval: false
+#| eval: true
 # YOUR CODE HERE
 ```
 
@@ -158,7 +157,7 @@ Complete and enable Exercise 3.1 first.
 ```{r}
 #| label: exercise-3-2-data-mean
 #| echo: true
-#| eval: false
+#| eval: true
 # YOUR CODE HERE
 ```
 
