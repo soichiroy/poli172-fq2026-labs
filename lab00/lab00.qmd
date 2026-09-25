@@ -27,8 +27,6 @@ Work **individually** during class.
 Complete any remaining work and submit your **PDF to Gradescope by
 Wednesday, September 30, at 11:59 p.m. (Pacific time)**.
 
-Practice basic R commands from DSS Chapter 1 (pp. 8-25) and render this
-Quarto (`.qmd`) document to PDF.
 
 # Part 1: Get started with Quarto
 
