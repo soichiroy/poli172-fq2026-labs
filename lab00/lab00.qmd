@@ -25,7 +25,7 @@ execute:
 
 Work **individually** during class. 
 Complete any remaining work and submit your **PDF to Gradescope by
-Friday, September 25, at 11:59 p.m. (Pacific time)**.
+Wednesday, September 30, at 11:59 p.m. (Pacific time)**.
 
 Practice basic R commands from DSS Chapter 1 (pp. 8-25) and render this
 Quarto (`.qmd`) document to PDF.
@@ -171,4 +171,4 @@ per county per election in this dataset.
 2. Click **Render**. Open the PDF and check your name, code, output,
    and written answers. 
 3. In **Files**, select `lab00.pdf`, then **More > Export** to download it. 
-   Submit that PDF to Gradescope by **Friday at 11:59 p.m.** Keep your `.qmd` for future edits.
+   Submit that PDF to Gradescope by **Wednesday at 11:59 p.m.** Keep your `.qmd` for future edits.
