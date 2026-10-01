@@ -1,0 +1,354 @@
+---
+title: "Lab 1: Distributions and Relationships"
+subtitle: "POLI 172 - Advanced Social Data Analytics"
+date: "2026-10-01"
+date-format: "MMMM D, YYYY"
+format: pdf
+pdf-engine: xelatex
+keep-tex: false
+fontsize: "11pt"
+geometry: "margin=0.85in"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: false
+  cache: false
+  freeze: false
+---
+
+<!-- Instructor authoring: generated question version from lab01-solutions.qmd; edit the answer master and regenerate. Learners may edit their own question copy. -->
+
+
+**Name:** [Your name]\
+**PID:** [Your PID]\
+**Group members:** [Names]
+
+Work with your group during Thursday's lab. Complete the remaining work by
+**Friday, October 2, 2026, at 11:59 p.m.** Use **DSS chapter 1** and the Week 1 lecture.
+
+Add code and brief interpretations where requested. All chunks run automatically
+when you render. Complete prerequisite chunks first, keep their labels, and
+render to PDF.
+
+# Context and data
+
+**Voelkel et al. (2024)**[^voelkel] tested 25 treatments in an online
+randomized experiment to study partisan animosity and antidemocratic attitudes
+among U.S. Democrats and Republicans, including partisan leaners. 
+In this lab, we focus on two experiment 
+groups: **Common National Identity**, whose participants read about a shared
+American identity supporting democracy and rejecting violence, and **Null
+Control**, which proceeded directly to the outcome questions. 
+Each row is one participant with both attitude scores as well as demographic information.
+We explore the data through descriptive questions about participants and their
+political attitudes.
+
+| Variable | Meaning |
+|-----------------|------------------------------------------------------|
+| `condition` | Assigned group: "Common identity" (treatment) or "Control". |
+| `party` | Democrat or Republican, including partisan leaners. |
+| `age` | Age in years. |
+| `undemocratic` | Mean agreement with four undemocratic practices benefiting one's own party; 0-100 points. |
+| `violence` | Mean acceptance or justification of four forms of partisan intimidation or violence by one's own party; 0-100 points. |
+
+The following  questions below are **paraphrased** version of the survey questions
+used to calculate the `undemocratic` and `violence` scores.
+In the question,  "your party" means the respondent's Democratic or Republican affiliation.[^questionnaire]
+For each participant, `undemocratic` is the mean of
+the four agreement ratings, and `violence` is the mean of the four
+acceptability/justification ratings
+
+### Undemocratic practices (`undemocratic`)
+
+- Should your party reduce polling locations in areas supporting the opposing party?
+- Should your party's governors ignore unfavorable rulings from opposition-appointed judges?
+- Should your party's governors prosecute journalists alleging misconduct by
+  your party's politicians when those journalists withhold their sources?
+- Should your party refuse to accept an election defeat?
+
+Agreement ranges from **0 = strongly disagree**, through **50 = neither disagree
+nor agree**, to **100 = strongly agree**.
+
+### Partisan violence (`violence`)
+
+- Is it acceptable for your party's supporters to intimidate opposing-party
+  leaders through threatening messages?
+- Is it acceptable for an ordinary supporter of your party to frighten an
+  ordinary opposing-party supporter through online harassment?
+- How justified is violence by your party's supporters to advance political goals?
+- How justified is such violence if the opposing party wins more races in the
+  next election?
+
+The first two responses range from **0 = never** to **100 = always**. The last
+two range from **0 = not justified at all**, through **50 = moderately justified**,
+to **100 = extremely justified**.
+
+These 0-100 scores are already calculated in the CSV.
+
+# Part 1: Read the data in R
+
+The supplied code loads the prepared data. Use `democracy` throughout the lab.
+
+```{r}
+#| label: provided-data
+#| eval: true
+democracy <- read.csv("democracy.csv")
+```
+
+## Exercise 1.1: Inspect the data
+
+Use `dim(democracy)` to report the number of participants and variables,
+then `table(democracy$condition)` to count participants in each group.
+
+```{r}
+#| label: inspect-sample
+#| echo: true
+#| eval: true
+# Report the dimensions and group sizes.
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 1.2: Identify the variables
+
+What does one row represent? Classify `condition`, `party`, `age`, and `violence`
+as categorical or numerical, and give the units of the numerical variables.
+
+[Your answer here]
+
+# Part 2: Understand one variable
+
+## Exercise 2.1: Make a histogram
+
+Use `hist()` to plot the participants' ages, leaving `breaks` unspecified so
+R chooses the bins. Label the horizontal axis `"Age (years)"` and the vertical
+axis `"Participants"`. In one sentence, describe the observed pattern.
+
+```{r}
+#| label: first-histogram
+#| echo: true
+#| eval: true
+# Make one histogram using R's default breaks.
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 2.2: Change the histogram bin width
+
+Draw two count histograms of age: first with **20-year
+bins** using `breaks = seq(10, 110, by = 20)`, then with **5-year bins** using
+`breaks = seq(10, 110, by = 5)`. Keep `xlim = c(10, 110)` and
+`ylim = c(0, 2800)` for both, and label the axes as in Exercise 2.1.
+Identify a feature revealed by narrower and wider bins and explain
+why heights change. 
+
+```{r}
+#| label: histogram-widths
+#| echo: true
+#| eval: true
+# Draw the 20-year histogram.
+# YOUR CODE HERE
+# Draw the 5-year histogram.
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 2.3: Make density histograms
+
+Draw density versions of the two histograms from Exercise 2.2,
+`freq = FALSE`. Keep 20-year and 5-year bins, label the vertical axes
+`"Density (per year)"`, and use `ylim = c(0, 0.028)` for both.
+What does a bar's **area** represent, how is its
+**height** calculated from the bin count, sample size, and bin width, and
+what is the total area of each histogram?
+
+\nopagebreak[4]
+
+```{r}
+#| label: density-histograms
+#| echo: true
+#| eval: true
+# Draw both density histograms here.
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 2.4: Calculate a bin's height and area
+
+Focus on the bin $30 < \text{age} \leq 50$, written $(30,50]$, in the 20-year bin histogram.
+Let $n$ be the total number of participants and $k$ the number of participants in this bin. 
+Calculate `n`, `k`, its density height, and its area. Store these as `n`, `k`,
+`height`, and `area`.
+
+**Hint:** `sum(democracy$age > 30 & democracy$age <= 50)` counts participants who
+meet both conditions. `&` means "and."
+
+```{r}
+#| label: density-area
+#| echo: true
+#| eval: true
+# Store the sample size, bin count, density height, and area.
+# YOUR CODE HERE
+```
+
+## Exercise 2.5: Read the empirical CDF
+
+These supplied plots show a density histogram with a smooth `density()`
+curve and the empirical CDF from `ecdf()`. Create
+`F_age <- ecdf(democracy$age)`. Calculate `F_age(50) - F_age(30)` and
+compare it with `area` from Exercise 2.4. Then calculate the CDF increase
+over $(70,90]$. Which interval contains a larger share of participants?
+
+```{r}
+#| label: provided-density-cdf
+#| echo: false
+#| fig-width: 6.5
+#| fig-height: 4.4
+#| eval: true
+par(mfrow = c(2, 1), mar = c(3.5, 4.2, 0.6, 0.8),
+    mgp = c(2.5, 0.7, 0))
+hist(democracy$age, breaks = seq(10, 110, by = 20),
+     freq = FALSE, xlim = c(10, 110), ylim = c(0, 0.028),
+     main = "", xlab = "Age (years)", ylab = "Density (per year)",
+     col = "lightblue", border = "white")
+lines(density(democracy$age), col = "navy", lwd = 2)
+plot(ecdf(democracy$age), xlim = c(10, 110),
+     main = "", xlab = "Age (years)", ylab = "Cumulative share",
+     verticals = TRUE, do.points = FALSE, col = "navy")
+par(mfrow = c(1, 1))
+```
+
+```{r}
+#| label: cdf-increases
+#| echo: true
+#| eval: true
+# Create F_age and compare the two interval shares.
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 2.6: Explain the connection
+
+Why does the CDF increase over $(30,50]$ equal that histogram bin's area?
+Briefly explain.
+
+[Your answer here]
+
+# Part 3: Understand bivariate relationships
+
+
+## Exercise 3.1: Plot the pairs and calculate correlation
+
+Plot `undemocratic` against `violence` (horizontal and vertical axes,
+respectively), labeling x and y-axes with `xlab` and `ylab`. 
+Calculate the **Pearson correlation** with `cor()`. 
+Interpret its sign and magnitude, then describe
+one feature of the scatterplot that the correlation alone does not convey.
+
+**Hint:** `pch = 16, cex = 0.4, col = adjustcolor("navy", 0.15)` makes dense
+areas of the scatterplot easier to see.
+
+```{r}
+#| label: attitude-scatter
+#| echo: true
+#| eval: true
+# Draw the plot and calculate the correlation.
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 3.2: Joint and marginal distributions
+
+The supplied code groups each score into **0-25** (including 25) or
+**Above 25**, using a cutoff chosen for this exercise.
+
+\nopagebreak[4]
+
+```{r}
+#| label: provided-score-bands
+#| eval: true
+democracy$practices_band <- ifelse(
+  democracy$undemocratic <= 25, "0-25", "Above 25")
+democracy$violence_band <- ifelse(
+  democracy$violence <= 25, "0-25", "Above 25")
+```
+
+Use `table()` to create `counts` of practices and violence bands
+that cross-tabulates the participants with higher or lower practices and violence. 
+Then create `joint_pct <- 100 * prop.table(counts)`. Print `joint_pct` and
+`rowSums(joint_pct)`, rounded to two decimals. Report the percentage with
+**both scores above 25**, and the marginal percentage with **practices above 25**.
+
+```{r}
+#| label: joint-table
+#| echo: true
+#| eval: true
+# Calculate the joint percentages and the practices margin.
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 3.3: Compare violence-score densities
+
+Draw overlapping density curves of `violence` for **Common identity** and
+**Control** on the same axes, as in the lecture's comparison of test scores.
+Use `density(..., bw = 5)` for the same smoothing in both groups, `plot()`
+for the first curve, and `lines()` for the second. Use different colors,
+`ylim = c(0, 0.065)`, and a `legend()`. In two sentences, describe where
+scores concentrate and how much the distributions overlap.
+
+**Hint 1:** `democracy$violence[democracy$condition == "Control"]` selects the
+control group's scores. Smooth curves can extend slightly beyond the
+observed 0-100 score range.
+
+**Hint 2:** `plot()` starts a new figure; `lines()` adds a curve to the existing
+figure. Run both commands in the **same chunk**. If `x` and `y` contain the two
+groups' scores, use this pattern:
+
+```r
+plot(density(x, bw = 5), col = "navy", ylim = c(0, 0.065))
+lines(density(y, bw = 5), col = "darkorange")
+legend("topright", legend = c("Group 1", "Group 2"),
+       col = c("navy", "darkorange"), lty = 1)
+```
+
+Replace `x`, `y`, and the group labels with yours, and add `xlab` and `ylab`
+to `plot()` to label the axes. A second `plot()` would start a separate figure.
+
+```{r}
+#| label: condition-violence-densities
+#| echo: true
+#| eval: true
+# Draw the two density curves on the same axes and add a legend.
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 3.4: Compare the experimental groups
+
+Draw boxplots of `undemocratic ~ condition` using `data = democracy` and
+`ylim = c(0, 100)`. Label both axes. In two sentences, compare the treatment
+and control groups' medians, middle halves, and overlap.
+
+```{r}
+#| label: condition-boxplots
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+
+[Your answer here]
+
+[^voelkel]: Voelkel, Jan G., et al. 2024. "[Megastudy testing 25 treatments to reduce antidemocratic attitudes and partisan animosity](https://doi.org/10.1126/science.adh4764)." *Science* 386(6719), eadh4764.
+
+[^questionnaire]: Voelkel et al., [original survey questionnaire](https://osf.io/download/mbhe5/), pp. 353-356. Party names were tailored to each respondent.
