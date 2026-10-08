@@ -1,0 +1,278 @@
+---
+title: "Lab 2: Randomized Experiments"
+subtitle: "POLI 172 - Advanced Social Data Analytics"
+date: "2026-10-08"
+date-format: "MMMM D, YYYY"
+format: pdf
+pdf-engine: xelatex
+keep-tex: false
+fontsize: "11pt"
+geometry: "margin=0.85in"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: false
+  cache: false
+  freeze: false
+---
+
+<!-- Instructor authoring: generated question version from lab02-solutions.qmd; edit the answer master and regenerate. Learners may edit their own question copy. -->
+
+
+**Name:** [Your name]\
+**PID:** [Your PID]\
+**Group members:** [Names]
+
+Work with your group during Thursday's lab. Complete the remaining work by
+**Friday, October 9, 2026, at 11:59 p.m.** Use **DSS chapter 2** and the Week 2
+lecture.
+
+Add code and brief interpretations, completing prerequisites first. Keep chunk
+labels. 
+Check the PDF and submit your own completed assignment to Gradescope.
+
+# Context and data
+
+**Can a door-to-door campaign increase women's voter turnout?**
+Cheema et al. (2023)[^cheema] studied this question during Pakistan's 2018
+national election. Their theory is that encouraging women to vote may be
+insufficient when male household members influence access to transportation
+and other resources. They hypothesized that also encouraging men to support
+women's participation would increase women's turnout.
+
+The researchers randomly assigned 500 wards (local electoral areas) in Lahore
+to canvassing women, men, both, or neither. In each treatment ward, four of five sampled households
+were randomly selected for visits. Canvassers provided nonpartisan voting
+information and encouragement before the election. This lab compares
+households **assigned visits to both men and women** with households in
+**control wards assigned no visits**.
+
+Each row in `pakistan-canvassing.csv` is one household, with survey responses
+from one sampled woman. Baseline characteristics were measured before the
+campaign. Polling officers mark voters' thumbs with indelible ink that remains
+visible for a few days. Researchers checked these marks just after the election
+to verify women's turnout and measured the other outcomes in a later survey.
+
+\newpage
+
+### Assignment and pretreatment covariates
+
+| Variable | Meaning |
+|---------------------|------------------------------------------------------|
+| `condition` | Assigned group: "Canvassing" or "Control". |
+| `age` | Sampled woman's age in years. |
+| `wealth` | Standardized household asset index. Higher means more assets. |
+| `married` | 1 if the sampled woman is married and 0 otherwise. |
+| `employed` | 1 if she is employed and 0 otherwise. |
+| `cellphone` | 1 if she owns a cellphone and 0 otherwise. |
+| `adult_men`, `adult_women` | Numbers of adult men and women in the household. |
+| `ward_id`, `union_council` | Ward and the larger area used to group wards for random assignment. |
+
+### Outcomes measured after assignment
+
+| Variable | Meaning |
+|---------------------|------------------------------------------------------|
+| `turnout` | Fraction of eligible women in the household whose voting was verified, from 0 to 1. |
+| `interest` | Woman's standardized political interest index. Higher means more interest. |
+| `discussion` | 1 if she reports discussing politics with male household members and 0 otherwise. |
+
+Eligible women are those with the identity cards required to vote. The
+interest index combines interest in political TV, political issues, and the
+election. It is already calculated in standard deviations in the authors'
+reference sample, and negative values are possible. The wealth index uses
+the same type of scale.
+
+\newpage
+
+# Part 1: Inspect the data and check baseline balance
+
+The supplied code reads the prepared data. Use `pakistan` throughout the lab.
+
+```{r}
+#| label: provided-data
+#| eval: true
+pakistan <- read.csv("pakistan-canvassing.csv")
+```
+
+## Exercise 1.1: Inspect the data and code treatment
+
+Use `nrow()`, `ncol()`, and `head()` to inspect the data, and `table()` to count
+households in each `condition`. What does one row represent?
+Create `pakistan$treat` using `ifelse()`: 1 for Canvassing and 0 for Control.
+Cross-tabulate `condition` and `treat` to check your coding.
+
+**Hint:** For a compact preview, use `head(pakistan[, 1:6])`. Put condition
+names in quotation marks when using `==`.
+
+```{r}
+#| label: inspect-assignment
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+## Exercise 1.2: Check pretreatment balance
+
+Calculate mean **age** and mean **wealth** in each assigned group and their
+treatment-minus-control differences. Then calculate the **cellphone ownership
+proportion** in each group and its difference in percentage points. Use all
+rows in the dataset.
+
+In two or three sentences, describe how similar the groups are on these
+characteristics. Why are these suitable baseline checks, while turnout is
+not? Does random assignment guarantee identical sample means?
+
+**Hint:** Use `mean(pakistan$age[pakistan$treat == 1])` as a pattern.
+The mean of a 0/1 variable is a proportion. Multiply its difference by 100
+for percentage points.
+
+```{r}
+#| label: baseline-balance
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+\newpage
+
+# Part 2: Interpret the causal quantities
+
+## Exercise 2.1: Potential outcomes and ATE
+
+Use **turnout** as the outcome. Answer the following questions in words.
+
+**a.** For household $i$, what do $Y_i(1)$ and $Y_i(0)$ represent in this
+experiment? Describe each potential outcome in one sentence.
+
+[Your answer here]
+
+**b.** The household's causal effect is $Y_i(1)-Y_i(0)$. If this effect were
+0.10 for a hypothetical household, what would that mean? For a household
+assigned to Canvassing, which potential outcome do we observe, and why can we
+not calculate its individual causal effect? Answer in two or three sentences.
+
+[Your answer here]
+
+**c.** The average treatment effect (**ATE**) is defined as 
+
+$$
+\text{ATE} = \frac{1}{n}\sum_{i=1}^{n}\{Y_i(1)-Y_i(0)\}
+= \overline{Y}(1)-\overline{Y}(0).
+$$
+
+What do $\overline{Y}(1)$ and $\overline{Y}(0)$ represent?  
+What does $n$
+count? Report $n$ using your result from Exercise 1.1. 
+Finally, what does the ATE represent in this context?
+
+[Your answer here]
+
+\newpage
+
+# Part 3: Estimate the ATE for different outcomes
+
+Use the treatment-minus-control difference in means:
+
+$$
+\widehat{\text{ATE}} =
+\underbrace{\frac{1}{n_1}\sum_{i:X_i=1}Y_i}_{\text{Observed treatment mean}}
+-
+\underbrace{\frac{1}{n_0}\sum_{i:X_i=0}Y_i}_{\text{Observed control mean}}.
+$$
+
+Here $X_i$ is the treatment indicator coded in Exercise 1.1, with 1 for
+Canvassing and 0 for Control. $Y_i$ is the observed outcome for household $i$.
+The counts $n_1$ and $n_0$ are the numbers of households in Canvassing and
+Control, respectively.
+
+
+## Exercise 3.1: Turnout and political discussion
+
+**a. Turnout.** Calculate mean `turnout` in each group, storing the means as `turnout_treat`
+and `turnout_control`. Store their difference as `turnout_difference`.
+Display both means and express the difference in **percentage points**.
+In one sentence, interpret the estimated ATE.
+
+```{r}
+#| label: turnout-comparison
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+**b. Political discussion.** Apply the same estimator to `discussion`, storing the group means as
+`discussion_treat` and `discussion_control`, and their difference as
+`discussion_difference`. Display both means and the difference in
+**percentage points**. Explain what each mean represents and interpret the
+estimated ATE.
+
+
+```{r}
+#| label: discussion-comparison
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 3.2: Political interest
+
+Repeat the calculation for `interest`, using `interest_treat`,
+`interest_control`, and `interest_difference`. Display the results and
+interpret the estimated ATE in one sentence, using standardized score units.
+
+```{r}
+#| label: interest-comparison
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+# Part 4: Interpret the evidence
+
+## Exercise 4.1: Compare the outcomes
+
+In two or three sentences, explain how the turnout and discussion estimates
+relate to the study's hypothesis. Does political interest show the same pattern? 
+
+[Your answer here]
+
+## Exercise 4.2: Confounding without randomization
+
+Suppose for now that we, as researchers, had not randomized canvassing.
+Instead, we chose to canvass households where women already
+seemed especially interested in politics.
+
+Identify the potential confounder. Explain how it could affect both which
+households receive canvassing and women's turnout even without canvassing.
+Would a treatment-minus-control difference then isolate the campaign's effect?
+Would you expect this particular selection rule to make the estimated effect
+too positive or too negative? Explain how the actual experiment's random
+assignment addresses this concern. 
+
+[Your answer here]
+
+## Exercise 4.3: Applying the finding elsewhere
+
+What could make it difficult to generalize the findings from Lahore to rural
+Pakistan? Explain in one or two sentences.
+
+[Your answer here]
+
+[^cheema]: Cheema, Ali, Sarah Khan, Asad Liaqat, and Shandana Khan Mohmand.
+2023. "Canvassing the Gatekeepers: A Field Experiment to Increase Women
+Voters' Turnout in Pakistan." *American Political Science Review* 117(1):
+1-21. [Article](https://doi.org/10.1017/S0003055422000375).
