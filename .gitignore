@@ -1,3 +1,6 @@
+# Ignore macOS folder metadata.
+.DS_Store
+
 # Keep compiled PDFs out of the distribution repository.
 *.[pP][dD][fF]
 
