@@ -1,0 +1,322 @@
+---
+title: "Lab 3: California Polls and Survey Inference"
+subtitle: "POLI 172 - Advanced Social Data Analytics"
+date: "2026-10-15"
+date-format: "MMMM D, YYYY"
+format: pdf
+pdf-engine: xelatex
+keep-tex: false
+fontsize: "11pt"
+geometry: "margin=0.85in"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: false
+  cache: false
+  freeze: false
+---
+
+<!-- Instructor authoring: generated question version from lab03-solutions.qmd; edit the answer master and regenerate. Learners may edit their own question copy. -->
+
+
+**Name:** [Your name]\
+**PID:** [Your PID]\
+**Group members:** [Names]
+
+Work with your group during Thursday's lab. Complete the remaining work by
+**Friday, October 16, 2026, at 11:59 p.m.** Use **DSS chapter 3** and the Week 3
+lecture.
+
+# Context and data
+
+**How much support do survey respondents express for California's ballot propositions?**
+The [Public Policy Institute of California (PPIC)](https://www.ppic.org/publication/ppic-statewide-survey-californians-and-their-government-september-2026/) surveyed California adults
+on September 4-10, 2026. We will examine two measures on the November ballot:
+Proposition 39, concerning voter identification requirements, and Proposition
+40, concerning a one-time tax on billionaires.
+
+Each row of `california-poll.csv` is one adult survey respondent with complete
+data and yes/no answers to both propositions. 
+The proposition questions were directed to registered voters, 
+and therefore our population of interest is registered voters in California.
+
+| Variable | Meaning |
+|-----------------------|----------------------------------------------------|
+| `voter_id` | Proposition 39 support: 1 yes, 0 no. |
+| `billionaire_tax` | Proposition 40 response, with the same codes. |
+| `college` | `Bachelor's or higher` = bachelor's degree or higher; `Below bachelor's` = below a bachelor's degree. |
+| `age` | Age in years. |
+| `party` | `Democrat`, `Republican`, or `Other / not registered`. |
+| `weight` | PPIC's final individual survey weight. |
+
+
+**Data source:** The Public Policy
+Institute of California, September 2026 [survey data](https://www.ppic.org/data-set/ppic-statewide-survey-data-2026/).
+
+# Part 1: Inspect the data and summarize opinions
+
+Add code and brief interpretations, completing prerequisites first. All
+exercise chunks run when you render. Keep chunk labels and check your PDF.
+
+```{r}
+#| label: provided-data
+#| eval: true
+poll <- read.csv("california-poll.csv")
+```
+
+## Exercise 1.1: Inspect the survey
+
+Use `nrow()`, `ncol()`, and `head(poll[, 1:4], 3)` to inspect the file. Use
+`table(poll$party)` to count respondents by party and `table(poll$voter_id)`
+to inspect the response codes. Report the number of respondents. 
+
+```{r}
+#| label: inspect-poll
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 1.2: Calculate support for two policies
+
+Both proposition variables are coded 1 for yes and 0 for no.
+
+For each policy, report the number of observations $n$ and calculate mean support.
+Store the means as `id_mean` and `tax_mean`. Express them as percentages.
+Explain why the mean of a 0/1 support vector is a proportion. 
+Do the two calculations use exactly the same number of respondents?
+
+```{r}
+#| label: sample-policy-means
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+## Exercise 1.3: Support conditional on party and education
+
+Using `poll`, calculate mean voter-ID support separately for each party
+group with `tapply(poll$voter_id, poll$party, mean)`. Then calculate
+support for each education group with
+`tapply(poll$voter_id, poll$college, mean)`.
+
+`tapply()` takes the values, the group labels, and the function to apply.
+The character labels in `party` and `college` appear directly in the output.
+Pass `mean` without parentheses so `tapply()` can call it for each group.
+
+Which party group has the highest support? Which education group has higher
+support, and by how many percentage points? Interpret these as conditional
+means, not causal effects of party or education.
+
+```{r}
+#| label: conditional-means
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+# Part 2: Understand unbiasedness through repeated sampling
+
+An estimator is **unbiased** if its average over all possible random samples
+equals the population quantity it estimates. This does not require every
+sample estimate to equal that quantity.
+
+We cannot observe everyone's opinion in California. To study unbiasedness,
+we will now treat **all the records in `poll` as our entire population**.
+Their recorded support responses remain fixed throughout the experiment,
+and we will repeatedly draw random samples from this fixed population to study the properties of our sample mean.
+
+We can now calculate the true proportion for this defined population and see
+whether random-sample estimates center on it. 
+
+```{r}
+#| label: provided-population
+#| eval: true
+population <- poll
+```
+
+## Exercise 2.1: Establish the known target
+
+Given this setup, what are the population size $N$ and the true proportion of support $p$?
+Store the population size as `N` and the population mean of `voter_id` as `p`.
+Report both `N` and `p`.
+
+```{r}
+#| label: empirical-target
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 2.2: Draw one random sample
+
+The supplied code selects 100 respondents at random. `replace = FALSE`
+prevents selecting a person twice within this sample. `set.seed()` makes the
+random draw reproducible.
+
+```{r}
+#| label: provided-one-sample
+#| eval: true
+set.seed(172)
+# Sample 100 respondents at random from the population
+rows <- sample(1:nrow(population), size = 100, replace = FALSE)
+one_sample <- population[rows, ]
+```
+
+
+Based on `one_sample`, calculate mean voter-ID support to estimate the
+support proportion and store it as `p_hat`.
+Calculate the difference from `p` in percentage points. 
+Does random sampling require this one estimate to
+equal the population mean? Explain in one sentence.
+
+```{r}
+#| label: one-sample-estimate
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+## Exercise 2.3: Plot the distribution of sample estimates
+
+`replicate(B, { ... })` repeats the code inside braces `B` times and collects
+the final value from each repetition. 
+Run this supplied code,
+which repeatedly draws 100 respondents at random from the population and computes the sample mean.
+
+```{r}
+#| label: provided-repeated-samples
+#| eval: true
+set.seed(173)
+B <- 1000
+p_hats <- replicate(B, {
+  # Draw 100 respondents at random from the population
+  rows <- sample(1:nrow(population), size = 100, replace = FALSE)
+  # Compute mean voter-ID support for this sample
+  mean(population$voter_id[rows])
+})
+```
+
+The variable `p_hats` contains mean voter-ID support for each of the `B` repeated random samples.
+Draw a histogram of `p_hats`, labeling the horizontal axis "Sample support proportion." 
+Add a vertical line at the population proportion `p` using `abline(v = p)`. 
+
+What does each value in `p_hats` represent?
+Describe where the histogram is centered and how the estimates vary.
+
+```{r}
+#| label: sampling-distribution
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 2.4: Interpret unbiasedness
+
+Calculate `mean(p_hats)` and compare it with `p`. Then explain the statement
+
+$$\mathbb E[\widehat p]=p.$$
+
+Your answer should identify what changes across repetitions and what stays
+fixed. 
+
+```{r}
+#| label: interpret-unbiasedness
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+## Exercise 2.5: Change the sample size
+
+What happens if we increase the sample size from 100 to 300?
+Copy the repeated-sampling code from Exercise 2.3, change `size = 100` to
+`size = 300`, and store the result as `p_hats_large`. Use `set.seed(175)`
+and keep `B = 1000`.
+
+Compare the simulation means and histograms of `p_hats` and `p_hats_large`.
+Which distribution is more concentrated around `p`? 
+Does increasing the sample size from 100 to 300 change whether the sample
+mean is unbiased? 
+
+```{r}
+#| label: larger-sample-comparison
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+# Part 3: Use the pollster's weights (Optional)
+
+## Exercise 3.1: Compare sample and weighted means (Optional)
+
+In practice, implementing random sampling is challenging due to logistical constraints 
+and the difficulty of reaching a truly representative sample.
+This means that the actual data might overrepresent or underrepresent certain groups in the population.
+We can address this issue by using survey weights.
+
+[PPIC weights its California adult survey](https://www.ppic.org/publication/ppic-statewide-survey-californians-and-their-government-september-2026/#methodology)
+using Census/ACS demographic data and state party-registration data
+to adjust for demographic and political representation in the survey sample.
+
+A weighted mean (instead of a sample mean) lets respondents contribute different amounts:
+$$
+\widehat p_w = \frac{1}{n}\sum_{i\in\mathcal S} w_i Y_i.
+$$
+
+Here $Y_i$ is the 0/1 support response, $w_i$ is the respondent's weight, and
+$\mathcal S$ contains the $n$ respondents included in the calculation.
+Assume the weights are normalized so that $\sum_{i\in\mathcal S} w_i = n$.
+A respondent with $w_i=2$ contributes twice as much as a respondent with $w_{i'}=1$.
+By assigning larger weights to respondents who are underrepresented in the sample,
+we can make the weighted mean better reflect the population.
+
+R's `weighted.mean(y, w)` computes the corresponding weighted mean.
+Run the supplied code for voter-ID support. The first argument is the outcome and the second is
+the corresponding weight.
+Briefly explain the result and compare it with the sample mean estimate from Exercise 1.2.
+
+```{r}
+#| label: supplied-weight-means
+#| eval: true
+id_weighted <- weighted.mean(poll$voter_id, poll$weight)
+100 * id_weighted
+```
+
+
+[Your answer here]
+
+Now, write your own code to compute weighted mean support for the billionaire tax.
+Store it as `tax_weighted` and express it as a percentage.
+Briefly explain the result and compare it with the sample mean from Exercise 1.2.
+
+```{r}
+#| label: billionaire-tax-weighted-mean
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]

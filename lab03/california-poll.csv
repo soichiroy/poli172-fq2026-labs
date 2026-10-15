@@ -1,0 +1,1405 @@
+"voter_id","billionaire_tax","college","age","party","weight"
+1,0,"Below bachelor's",72,"Republican",0.471050708705853
+0,0,"Below bachelor's",79,"Democrat",1.11285546239665
+0,0,"Below bachelor's",69,"Other / not registered",1.18387468540126
+0,1,"Below bachelor's",75,"Republican",1.80382272679018
+1,1,"Below bachelor's",70,"Democrat",0.582697289170926
+0,0,"Bachelor's or higher",66,"Other / not registered",0.307467998829167
+1,1,"Bachelor's or higher",61,"Other / not registered",0.267659845367058
+0,0,"Below bachelor's",73,"Republican",0.484179811663852
+1,1,"Bachelor's or higher",76,"Democrat",0.132474744915668
+0,0,"Bachelor's or higher",69,"Other / not registered",0.817159751267054
+0,1,"Bachelor's or higher",89,"Democrat",0.412389537892791
+0,1,"Below bachelor's",78,"Other / not registered",0.734563026308834
+0,1,"Below bachelor's",71,"Democrat",1.30967976611416
+0,1,"Bachelor's or higher",33,"Democrat",2.10934876432124
+1,0,"Bachelor's or higher",76,"Democrat",0.417153146094929
+0,1,"Bachelor's or higher",66,"Other / not registered",1.35147781470471
+0,1,"Bachelor's or higher",49,"Democrat",0.78526400187083
+0,1,"Bachelor's or higher",87,"Other / not registered",0.389544775062277
+0,1,"Bachelor's or higher",75,"Republican",0.496244076819487
+1,0,"Below bachelor's",70,"Republican",0.243497039914095
+1,0,"Below bachelor's",66,"Republican",0.366550747826186
+0,1,"Bachelor's or higher",66,"Democrat",0.961424525221437
+1,0,"Bachelor's or higher",86,"Democrat",0.903995672104941
+0,0,"Below bachelor's",61,"Democrat",0.531596467508164
+1,0,"Bachelor's or higher",47,"Republican",0.72860204896742
+1,0,"Bachelor's or higher",92,"Other / not registered",0.342701192836142
+0,0,"Bachelor's or higher",66,"Republican",0.243026468373595
+0,1,"Bachelor's or higher",45,"Democrat",0.31450001072561
+0,1,"Bachelor's or higher",60,"Democrat",0.802182752084029
+0,1,"Bachelor's or higher",49,"Democrat",1.968403665673
+0,1,"Bachelor's or higher",77,"Democrat",0.645742050418063
+0,1,"Below bachelor's",66,"Democrat",0.919158803027111
+1,0,"Below bachelor's",73,"Republican",0.889698203764898
+0,1,"Bachelor's or higher",84,"Democrat",0.377889184627235
+1,0,"Bachelor's or higher",72,"Other / not registered",0.403870408458461
+0,1,"Below bachelor's",57,"Democrat",0.422521575228621
+0,0,"Bachelor's or higher",69,"Democrat",0.583986498061622
+0,1,"Bachelor's or higher",81,"Democrat",0.412389537892791
+0,1,"Below bachelor's",74,"Democrat",0.446072623741541
+0,0,"Below bachelor's",88,"Democrat",1.28916922800982
+0,1,"Bachelor's or higher",67,"Democrat",0.340674107876899
+1,0,"Below bachelor's",66,"Republican",1.41064529185294
+1,0,"Below bachelor's",83,"Republican",0.809394965261285
+0,1,"Bachelor's or higher",50,"Other / not registered",0.606184393929831
+0,0,"Bachelor's or higher",78,"Democrat",0.343052175388367
+1,0,"Below bachelor's",62,"Republican",1.61991152772739
+1,0,"Below bachelor's",83,"Other / not registered",1.0529998367863
+0,0,"Below bachelor's",84,"Democrat",0.339026978399218
+0,1,"Below bachelor's",52,"Democrat",0.736842559348113
+1,1,"Below bachelor's",72,"Other / not registered",0.254622329314189
+1,0,"Below bachelor's",73,"Republican",1.86068295788451
+1,0,"Below bachelor's",64,"Other / not registered",0.757671307200036
+0,0,"Below bachelor's",44,"Other / not registered",1.5167803841875
+1,0,"Bachelor's or higher",75,"Republican",0.241880803224574
+0,1,"Below bachelor's",65,"Democrat",0.303524877206348
+0,0,"Below bachelor's",64,"Democrat",0.279429894000518
+0,1,"Bachelor's or higher",85,"Democrat",0.577317765251751
+1,0,"Below bachelor's",87,"Democrat",0.399552210370092
+0,1,"Bachelor's or higher",68,"Democrat",0.621708433535752
+0,0,"Bachelor's or higher",61,"Other / not registered",0.130789297094125
+0,0,"Bachelor's or higher",69,"Democrat",0.768139317498795
+1,0,"Bachelor's or higher",85,"Republican",0.650758284375811
+1,0,"Bachelor's or higher",66,"Democrat",0.152591636092652
+0,1,"Below bachelor's",69,"Republican",0.518459516735935
+1,0,"Below bachelor's",68,"Republican",1.31985358104894
+1,0,"Bachelor's or higher",84,"Republican",1.10284110218368
+1,0,"Bachelor's or higher",80,"Republican",0.650758284375811
+1,0,"Bachelor's or higher",89,"Republican",0.459199245211545
+1,0,"Below bachelor's",50,"Republican",1.63527041882966
+0,1,"Bachelor's or higher",81,"Other / not registered",0.281565014164961
+0,1,"Bachelor's or higher",58,"Other / not registered",0.270520769298738
+0,1,"Bachelor's or higher",78,"Other / not registered",0.220956896931272
+0,0,"Bachelor's or higher",56,"Democrat",0.598186030636939
+0,0,"Below bachelor's",65,"Democrat",0.883936540943031
+1,0,"Bachelor's or higher",69,"Republican",0.650273914546652
+0,0,"Below bachelor's",85,"Democrat",0.717737936855147
+0,1,"Bachelor's or higher",71,"Other / not registered",0.255553823850016
+0,0,"Bachelor's or higher",75,"Other / not registered",0.577047814167186
+0,1,"Bachelor's or higher",81,"Democrat",0.570541179117964
+1,1,"Below bachelor's",66,"Democrat",0.518716950509055
+0,0,"Below bachelor's",75,"Democrat",0.226740732763637
+1,0,"Below bachelor's",60,"Republican",1.2529124684231
+1,0,"Bachelor's or higher",55,"Republican",0.815135975906591
+0,0,"Bachelor's or higher",63,"Democrat",0.532148536581459
+0,0,"Below bachelor's",75,"Democrat",0.387323513533059
+0,1,"Below bachelor's",85,"Democrat",0.635629260044909
+1,0,"Below bachelor's",69,"Other / not registered",0.623599805113309
+0,1,"Bachelor's or higher",68,"Democrat",0.552222952475525
+0,0,"Bachelor's or higher",82,"Republican",0.241880803224574
+0,0,"Below bachelor's",77,"Republican",0.520915193216186
+1,0,"Below bachelor's",82,"Republican",1.36675434549299
+0,1,"Bachelor's or higher",84,"Other / not registered",0.650601978270033
+1,0,"Below bachelor's",59,"Republican",0.738473546841025
+0,1,"Bachelor's or higher",31,"Democrat",0.629397772186462
+1,0,"Below bachelor's",67,"Other / not registered",0.301564138402119
+1,0,"Bachelor's or higher",84,"Other / not registered",0.281565014164961
+0,1,"Below bachelor's",54,"Democrat",0.540664264291443
+1,0,"Bachelor's or higher",63,"Other / not registered",0.130789297094125
+1,0,"Below bachelor's",82,"Republican",0.518459516735935
+1,0,"Bachelor's or higher",86,"Republican",0.131990842292791
+1,0,"Bachelor's or higher",76,"Republican",0.943390930457872
+1,0,"Bachelor's or higher",61,"Republican",1.14113583577146
+1,1,"Bachelor's or higher",82,"Republican",0.645893065957142
+0,1,"Bachelor's or higher",76,"Democrat",1.12176097051402
+0,0,"Bachelor's or higher",81,"Republican",0.261700605707814
+1,1,"Below bachelor's",52,"Democrat",1.43780601811171
+1,0,"Bachelor's or higher",72,"Other / not registered",0.357758257497273
+0,1,"Bachelor's or higher",83,"Democrat",0.697999624481817
+1,0,"Below bachelor's",64,"Republican",0.507067334699994
+0,0,"Bachelor's or higher",71,"Republican",1.1421986355057
+1,0,"Bachelor's or higher",84,"Republican",0.642848224049124
+0,0,"Bachelor's or higher",77,"Democrat",0.343052175388367
+0,1,"Below bachelor's",71,"Democrat",0.983594363456442
+0,1,"Bachelor's or higher",78,"Democrat",1.26366680391248
+1,1,"Below bachelor's",88,"Other / not registered",0.322831090820684
+1,0,"Bachelor's or higher",72,"Republican",0.459199245211545
+0,0,"Below bachelor's",36,"Other / not registered",2.31431861156508
+0,0,"Below bachelor's",68,"Other / not registered",1.60398087438385
+1,0,"Bachelor's or higher",73,"Republican",0.6955234453048
+0,0,"Bachelor's or higher",79,"Democrat",0.353883123950831
+0,1,"Below bachelor's",56,"Other / not registered",0.307443714277155
+1,0,"Bachelor's or higher",63,"Other / not registered",1.21603639830128
+0,1,"Bachelor's or higher",42,"Other / not registered",0.666854598121879
+1,0,"Below bachelor's",84,"Other / not registered",1.14671466363812
+0,0,"Bachelor's or higher",74,"Democrat",0.303883983394674
+0,0,"Bachelor's or higher",62,"Other / not registered",0.728417716485314
+1,1,"Bachelor's or higher",66,"Republican",0.140899511425147
+0,1,"Bachelor's or higher",61,"Other / not registered",0.235726105858996
+0,1,"Bachelor's or higher",52,"Other / not registered",1.25880284162065
+1,0,"Below bachelor's",68,"Republican",0.442148725001338
+1,0,"Bachelor's or higher",77,"Other / not registered",0.134858602857829
+0,1,"Below bachelor's",76,"Democrat",0.509570324488126
+0,0,"Below bachelor's",84,"Democrat",0.68986697408165
+0,1,"Bachelor's or higher",50,"Democrat",0.720825560439259
+0,1,"Bachelor's or higher",49,"Other / not registered",1.93996064975601
+1,1,"Bachelor's or higher",68,"Democrat",0.564025982802304
+0,0,"Bachelor's or higher",77,"Democrat",0.307915983701748
+0,1,"Bachelor's or higher",60,"Other / not registered",0.47035581225331
+1,0,"Below bachelor's",62,"Other / not registered",0.685733029645616
+0,1,"Below bachelor's",56,"Other / not registered",1.44209821802715
+0,1,"Bachelor's or higher",77,"Democrat",0.621708433535752
+1,0,"Below bachelor's",79,"Republican",0.584216742318145
+0,0,"Bachelor's or higher",63,"Other / not registered",1.32209437891024
+0,0,"Bachelor's or higher",79,"Democrat",0.151334234639741
+1,0,"Below bachelor's",71,"Republican",0.230402022480412
+1,0,"Bachelor's or higher",69,"Republican",0.386365175058708
+1,1,"Below bachelor's",33,"Democrat",0.955446724617682
+0,1,"Below bachelor's",73,"Democrat",0.876044299859248
+0,1,"Bachelor's or higher",73,"Democrat",0.289023362209346
+0,1,"Bachelor's or higher",51,"Democrat",0.271220887016915
+1,0,"Bachelor's or higher",63,"Republican",0.236565923176307
+0,1,"Below bachelor's",75,"Democrat",1.01123933791687
+1,1,"Bachelor's or higher",51,"Other / not registered",0.689443325473395
+0,1,"Below bachelor's",83,"Other / not registered",0.541009455323955
+1,0,"Below bachelor's",68,"Other / not registered",0.819121043376166
+1,0,"Below bachelor's",66,"Democrat",0.590926825740531
+0,1,"Bachelor's or higher",41,"Democrat",0.185764613901912
+0,0,"Bachelor's or higher",70,"Other / not registered",0.626413985315402
+0,1,"Bachelor's or higher",34,"Democrat",0.797975667025795
+1,0,"Below bachelor's",84,"Republican",0.584216742318145
+0,0,"Bachelor's or higher",34,"Democrat",2.03618042562938
+0,1,"Below bachelor's",67,"Other / not registered",0.416163195609683
+0,1,"Bachelor's or higher",39,"Democrat",0.792534412812091
+1,1,"Bachelor's or higher",75,"Republican",0.488004921394791
+0,1,"Bachelor's or higher",65,"Other / not registered",0.519185140741498
+1,1,"Bachelor's or higher",48,"Democrat",0.59706337013499
+1,1,"Bachelor's or higher",64,"Democrat",0.620279901895657
+0,0,"Bachelor's or higher",44,"Other / not registered",0.941398545036849
+0,0,"Bachelor's or higher",61,"Republican",0.377407733565405
+1,0,"Bachelor's or higher",73,"Other / not registered",0.360725668647235
+1,0,"Bachelor's or higher",50,"Other / not registered",0.303138420232272
+0,0,"Bachelor's or higher",48,"Other / not registered",0.50462020755941
+0,0,"Bachelor's or higher",73,"Other / not registered",0.195350806250685
+1,0,"Bachelor's or higher",47,"Republican",0.931364040497189
+1,0,"Bachelor's or higher",77,"Democrat",0.635629260044909
+1,0,"Bachelor's or higher",73,"Other / not registered",0.760781589339605
+1,0,"Bachelor's or higher",73,"Other / not registered",0.583713428708811
+0,0,"Below bachelor's",53,"Republican",1.55060876856982
+0,1,"Below bachelor's",75,"Republican",0.35565159490896
+0,1,"Below bachelor's",67,"Democrat",0.5899575178604
+1,1,"Below bachelor's",57,"Democrat",0.67965311872094
+0,1,"Bachelor's or higher",60,"Other / not registered",0.473321576050836
+1,0,"Bachelor's or higher",72,"Republican",0.488004921394791
+0,0,"Bachelor's or higher",92,"Other / not registered",0.187693236586745
+1,1,"Below bachelor's",44,"Republican",0.347830949219454
+0,1,"Below bachelor's",65,"Other / not registered",0.254622329314189
+1,1,"Below bachelor's",65,"Democrat",2.20686866279732
+0,1,"Bachelor's or higher",44,"Democrat",0.758989867804633
+0,1,"Bachelor's or higher",50,"Other / not registered",1.56549316052611
+1,0,"Below bachelor's",82,"Republican",0.362364984959022
+1,0,"Below bachelor's",81,"Republican",0.529455936764728
+1,1,"Below bachelor's",52,"Other / not registered",1.39189215596761
+0,0,"Bachelor's or higher",73,"Republican",0.695225977943141
+0,0,"Below bachelor's",61,"Democrat",0.309756663207181
+0,1,"Below bachelor's",57,"Democrat",1.70568398448826
+1,1,"Below bachelor's",39,"Democrat",0.251495044358177
+1,0,"Below bachelor's",84,"Other / not registered",1.18387468540126
+0,1,"Bachelor's or higher",36,"Democrat",1.07881800557663
+1,1,"Below bachelor's",38,"Other / not registered",0.38083977194271
+1,0,"Bachelor's or higher",58,"Other / not registered",0.868638934292272
+1,0,"Below bachelor's",37,"Republican",0.724491701963135
+1,0,"Bachelor's or higher",74,"Republican",0.272559014402527
+0,0,"Bachelor's or higher",61,"Other / not registered",1.00463751004264
+0,1,"Bachelor's or higher",53,"Other / not registered",0.418301330407675
+1,1,"Bachelor's or higher",76,"Other / not registered",0.307467998829167
+0,0,"Bachelor's or higher",70,"Other / not registered",0.729379887774818
+1,1,"Bachelor's or higher",57,"Democrat",1.47483789860003
+0,1,"Bachelor's or higher",62,"Democrat",1.31561559865666
+0,1,"Bachelor's or higher",72,"Democrat",0.552222952475525
+0,0,"Bachelor's or higher",69,"Democrat",0.340141251231913
+1,0,"Below bachelor's",69,"Republican",1.25340505768478
+0,0,"Bachelor's or higher",56,"Other / not registered",1.02831270166714
+0,0,"Below bachelor's",77,"Democrat",2.10670410637271
+0,1,"Bachelor's or higher",44,"Other / not registered",0.765313615299961
+0,0,"Bachelor's or higher",82,"Other / not registered",0.212736627542944
+1,0,"Bachelor's or higher",44,"Other / not registered",0.709551883460356
+1,1,"Bachelor's or higher",42,"Other / not registered",1.08169460509673
+0,0,"Below bachelor's",27,"Republican",0.872646785739634
+0,1,"Below bachelor's",65,"Democrat",0.68986697408165
+0,1,"Bachelor's or higher",41,"Democrat",0.580018880867242
+0,1,"Bachelor's or higher",30,"Democrat",1.7081733292637
+0,1,"Below bachelor's",52,"Democrat",0.869338335900196
+1,1,"Below bachelor's",35,"Other / not registered",1.29695627168514
+1,1,"Below bachelor's",46,"Republican",0.671656770790206
+1,0,"Below bachelor's",72,"Other / not registered",0.464214796501031
+1,0,"Below bachelor's",66,"Republican",2.71694533833721
+0,0,"Bachelor's or higher",47,"Other / not registered",0.900596498404892
+0,1,"Bachelor's or higher",57,"Democrat",0.320465216292322
+1,0,"Bachelor's or higher",69,"Republican",1.10284110218368
+0,0,"Bachelor's or higher",61,"Republican",0.63931139924829
+0,1,"Below bachelor's",73,"Democrat",1.2922620624059
+0,0,"Bachelor's or higher",71,"Democrat",0.582638407188507
+0,1,"Below bachelor's",56,"Democrat",1.41578716612768
+0,1,"Bachelor's or higher",57,"Democrat",0.523892870109083
+0,1,"Bachelor's or higher",38,"Democrat",1.87346958480223
+0,0,"Bachelor's or higher",32,"Other / not registered",1.67554762989334
+1,0,"Below bachelor's",66,"Republican",0.887106046610173
+1,0,"Below bachelor's",39,"Republican",0.4229257371695
+0,1,"Bachelor's or higher",43,"Democrat",1.08649151144789
+0,1,"Below bachelor's",74,"Other / not registered",0.361347529821966
+1,0,"Below bachelor's",60,"Republican",0.795070991165735
+1,0,"Bachelor's or higher",40,"Republican",1.17486323763096
+0,1,"Bachelor's or higher",78,"Democrat",1.24354114793236
+0,0,"Bachelor's or higher",52,"Republican",2.84016387674057
+0,1,"Bachelor's or higher",76,"Other / not registered",0.511345538948963
+0,0,"Below bachelor's",33,"Democrat",1.79358444793708
+1,1,"Bachelor's or higher",46,"Democrat",0.540880128636844
+1,1,"Below bachelor's",51,"Democrat",0.344806946024626
+0,0,"Below bachelor's",75,"Republican",0.218425046917511
+1,0,"Bachelor's or higher",60,"Republican",1.40195704163942
+1,0,"Below bachelor's",77,"Democrat",0.5899575178604
+0,0,"Below bachelor's",57,"Democrat",1.29028924561889
+0,1,"Bachelor's or higher",34,"Other / not registered",1.1367404617512
+0,1,"Bachelor's or higher",38,"Democrat",0.293032416272667
+0,0,"Below bachelor's",80,"Democrat",0.801587195391415
+0,1,"Bachelor's or higher",43,"Other / not registered",0.62420158044987
+1,0,"Below bachelor's",69,"Other / not registered",0.75381887240342
+0,1,"Bachelor's or higher",87,"Democrat",0.332320326087229
+1,0,"Bachelor's or higher",80,"Other / not registered",0.577047814167186
+1,0,"Below bachelor's",69,"Republican",0.324977021029758
+0,0,"Bachelor's or higher",61,"Democrat",0.600738186543086
+1,0,"Bachelor's or higher",41,"Republican",1.37275510929246
+0,1,"Bachelor's or higher",73,"Other / not registered",0.958703015565512
+0,1,"Bachelor's or higher",26,"Democrat",2.03618042562938
+1,0,"Below bachelor's",79,"Republican",0.500982347415358
+1,0,"Below bachelor's",63,"Republican",1.61254542596374
+1,1,"Below bachelor's",89,"Republican",0.425362117003839
+0,1,"Below bachelor's",65,"Other / not registered",0.276918922018987
+0,0,"Bachelor's or higher",43,"Democrat",1.72586501436767
+0,1,"Bachelor's or higher",34,"Democrat",2.86615901519862
+1,0,"Below bachelor's",81,"Other / not registered",0.588247629822721
+0,1,"Below bachelor's",76,"Democrat",0.619507256048456
+0,1,"Bachelor's or higher",61,"Other / not registered",0.324458654229584
+1,1,"Bachelor's or higher",44,"Other / not registered",1.05427711470827
+0,1,"Below bachelor's",42,"Democrat",1.15944775995456
+1,1,"Bachelor's or higher",45,"Other / not registered",0.560840376924267
+0,1,"Bachelor's or higher",31,"Democrat",1.63480471938667
+1,1,"Below bachelor's",37,"Republican",0.921174275834626
+1,0,"Below bachelor's",40,"Democrat",1.09861971540755
+0,1,"Bachelor's or higher",70,"Democrat",0.903995672104941
+0,1,"Bachelor's or higher",48,"Democrat",0.698774079214932
+0,1,"Below bachelor's",79,"Democrat",0.226740732763637
+1,0,"Bachelor's or higher",71,"Republican",0.464503563313509
+1,1,"Bachelor's or higher",32,"Democrat",1.49531737264213
+1,0,"Bachelor's or higher",71,"Republican",0.650273914546652
+0,0,"Below bachelor's",35,"Democrat",0.685553573106726
+0,1,"Bachelor's or higher",62,"Democrat",0.782740315237278
+1,0,"Bachelor's or higher",35,"Republican",0.597750230705275
+0,1,"Bachelor's or higher",56,"Democrat",0.144288580717504
+0,0,"Below bachelor's",70,"Democrat",0.883936540943031
+0,0,"Bachelor's or higher",33,"Other / not registered",2.34565459202888
+0,1,"Bachelor's or higher",78,"Democrat",0.180700941031925
+0,1,"Below bachelor's",62,"Other / not registered",0.430124987798744
+0,0,"Bachelor's or higher",49,"Republican",0.916878512888959
+1,1,"Below bachelor's",61,"Republican",0.364274594454678
+1,1,"Bachelor's or higher",49,"Other / not registered",0.848617599326771
+0,0,"Below bachelor's",66,"Democrat",0.97321780701009
+0,1,"Bachelor's or higher",74,"Democrat",0.340141251231913
+1,1,"Bachelor's or higher",32,"Other / not registered",2.79592673713001
+0,0,"Below bachelor's",66,"Republican",0.855397344349485
+0,1,"Bachelor's or higher",41,"Democrat",1.50602911015234
+1,0,"Bachelor's or higher",49,"Democrat",0.57450453886622
+0,1,"Bachelor's or higher",44,"Democrat",0.778794207222847
+1,0,"Bachelor's or higher",43,"Republican",0.771245635721843
+0,1,"Below bachelor's",77,"Democrat",0.902662278353209
+0,1,"Below bachelor's",63,"Democrat",0.267532519910474
+0,1,"Below bachelor's",57,"Democrat",0.434790275009065
+0,1,"Bachelor's or higher",69,"Democrat",0.454042595946707
+0,1,"Below bachelor's",70,"Democrat",0.468806067896381
+0,1,"Bachelor's or higher",48,"Democrat",0.913625684147683
+1,0,"Below bachelor's",35,"Republican",2.39713328483125
+0,0,"Bachelor's or higher",74,"Democrat",0.331292925459478
+0,1,"Below bachelor's",46,"Democrat",2.20004820866829
+1,0,"Bachelor's or higher",62,"Republican",0.449109197245695
+0,0,"Bachelor's or higher",71,"Democrat",0.198138938100273
+1,1,"Bachelor's or higher",49,"Republican",1.04565316904331
+0,1,"Bachelor's or higher",64,"Democrat",0.738230939770593
+1,0,"Below bachelor's",84,"Republican",0.21887678259791
+1,1,"Below bachelor's",58,"Other / not registered",0.440330556904202
+1,0,"Below bachelor's",86,"Republican",0.194024211337857
+1,0,"Below bachelor's",70,"Republican",0.496244076819487
+1,0,"Bachelor's or higher",40,"Republican",1.12040154235559
+0,1,"Bachelor's or higher",59,"Other / not registered",0.617224865729646
+1,0,"Bachelor's or higher",58,"Republican",0.818303795376976
+0,1,"Below bachelor's",83,"Other / not registered",0.367834667108596
+1,0,"Bachelor's or higher",56,"Other / not registered",0.423900245028778
+1,1,"Below bachelor's",71,"Republican",0.723679824272595
+0,1,"Bachelor's or higher",77,"Other / not registered",0.136020671450903
+0,1,"Bachelor's or higher",61,"Other / not registered",0.540285477021631
+1,0,"Below bachelor's",57,"Democrat",1.32953923540288
+0,0,"Below bachelor's",75,"Democrat",1.17090314201925
+0,0,"Below bachelor's",75,"Democrat",1.14640572603087
+0,1,"Bachelor's or higher",45,"Republican",0.680632419796616
+1,1,"Below bachelor's",62,"Republican",0.210889181594635
+1,0,"Below bachelor's",48,"Other / not registered",0.525206063532705
+1,0,"Bachelor's or higher",69,"Democrat",0.153577337685463
+0,1,"Below bachelor's",42,"Democrat",0.850551863603628
+1,0,"Bachelor's or higher",82,"Other / not registered",0.205190674999025
+1,0,"Bachelor's or higher",81,"Republican",0.539075577806124
+0,1,"Bachelor's or higher",60,"Democrat",0.619309707038359
+0,1,"Below bachelor's",62,"Other / not registered",0.766323649323369
+0,0,"Below bachelor's",78,"Democrat",1.00478509677745
+1,0,"Bachelor's or higher",65,"Republican",0.911018064072654
+0,1,"Below bachelor's",69,"Other / not registered",0.819121043376166
+0,1,"Below bachelor's",50,"Democrat",2.48996922378538
+0,1,"Below bachelor's",57,"Democrat",0.303818075712101
+0,0,"Below bachelor's",38,"Other / not registered",1.2303599064791
+0,0,"Below bachelor's",46,"Republican",0.475499066991487
+1,0,"Bachelor's or higher",68,"Republican",1.28432108719041
+0,1,"Bachelor's or higher",69,"Democrat",0.648555281850481
+0,1,"Below bachelor's",51,"Democrat",3.99227284456364
+0,1,"Bachelor's or higher",68,"Democrat",0.287300874624249
+1,1,"Below bachelor's",55,"Democrat",0.643102081214909
+0,1,"Below bachelor's",79,"Democrat",0.920879166039078
+1,1,"Below bachelor's",76,"Other / not registered",0.416163195609683
+0,0,"Bachelor's or higher",90,"Republican",0.247011045458153
+0,1,"Bachelor's or higher",35,"Democrat",0.778794207222847
+1,0,"Below bachelor's",65,"Other / not registered",0.556612284396883
+0,1,"Bachelor's or higher",39,"Democrat",1.01601219321667
+0,0,"Bachelor's or higher",71,"Republican",0.645893065957142
+0,0,"Bachelor's or higher",56,"Other / not registered",0.51357086391305
+0,1,"Bachelor's or higher",79,"Democrat",0.343052175388367
+1,0,"Bachelor's or higher",67,"Other / not registered",0.677423552167711
+1,0,"Bachelor's or higher",65,"Republican",0.408696550543476
+1,0,"Below bachelor's",57,"Republican",1.75399363917452
+0,0,"Bachelor's or higher",33,"Democrat",1.60492679544245
+0,1,"Bachelor's or higher",56,"Democrat",0.524944942533808
+0,0,"Bachelor's or higher",79,"Democrat",0.552222952475525
+1,0,"Below bachelor's",28,"Republican",3.60315351863721
+0,0,"Below bachelor's",68,"Republican",0.285896338359836
+1,0,"Bachelor's or higher",58,"Other / not registered",0.382958618626777
+0,1,"Below bachelor's",84,"Democrat",0.256152051577222
+1,1,"Bachelor's or higher",62,"Republican",0.69123967407111
+0,0,"Bachelor's or higher",75,"Other / not registered",0.489910531577862
+1,0,"Below bachelor's",53,"Republican",1.30029964554143
+0,1,"Bachelor's or higher",79,"Democrat",0.480250096236561
+1,0,"Bachelor's or higher",76,"Other / not registered",0.323542741197189
+0,1,"Bachelor's or higher",31,"Other / not registered",1.62525246606823
+0,1,"Bachelor's or higher",53,"Democrat",0.575763153022425
+1,0,"Bachelor's or higher",88,"Republican",0.272559014402527
+1,0,"Below bachelor's",60,"Republican",0.910873355742682
+0,1,"Below bachelor's",58,"Democrat",1.22403522017592
+1,1,"Bachelor's or higher",67,"Democrat",0.532665037798434
+1,0,"Below bachelor's",69,"Republican",0.490577303413296
+0,1,"Bachelor's or higher",72,"Democrat",0.158995915086075
+0,0,"Below bachelor's",81,"Democrat",0.925834728154255
+0,1,"Below bachelor's",71,"Democrat",0.632515109798225
+1,0,"Bachelor's or higher",36,"Other / not registered",0.638278993233348
+0,0,"Below bachelor's",60,"Other / not registered",4.42388962378178
+0,0,"Below bachelor's",79,"Democrat",1.14394504239052
+1,0,"Below bachelor's",70,"Republican",1.049461142811
+1,0,"Bachelor's or higher",64,"Other / not registered",0.869108702908791
+0,0,"Below bachelor's",75,"Republican",0.370050671979338
+1,0,"Bachelor's or higher",82,"Republican",0.131990842292791
+1,0,"Below bachelor's",75,"Democrat",1.06871364572497
+1,1,"Below bachelor's",30,"Other / not registered",1.09692189026849
+0,1,"Bachelor's or higher",69,"Other / not registered",0.16019253636167
+0,1,"Below bachelor's",61,"Democrat",1.70568398448826
+1,1,"Bachelor's or higher",52,"Democrat",1.02457177159828
+0,0,"Bachelor's or higher",50,"Democrat",1.24553092553415
+0,1,"Bachelor's or higher",78,"Democrat",0.151334234639741
+0,1,"Below bachelor's",44,"Democrat",1.95147950031427
+0,0,"Bachelor's or higher",80,"Democrat",0.495412699661442
+1,0,"Bachelor's or higher",53,"Republican",1.26564310173646
+0,1,"Below bachelor's",66,"Democrat",1.2089617471573
+0,0,"Bachelor's or higher",53,"Democrat",0.913625684147683
+1,0,"Bachelor's or higher",39,"Republican",1.42276824783065
+0,0,"Below bachelor's",51,"Other / not registered",0.697139390451225
+1,0,"Bachelor's or higher",54,"Republican",0.424701473409471
+1,0,"Below bachelor's",78,"Democrat",0.27925754283115
+1,1,"Bachelor's or higher",43,"Democrat",0.510171752960459
+0,0,"Bachelor's or higher",43,"Democrat",1.68848911457595
+0,1,"Bachelor's or higher",36,"Democrat",0.501120796305794
+1,0,"Bachelor's or higher",72,"Republican",0.645893065957142
+0,1,"Below bachelor's",53,"Democrat",0.912540268615237
+1,1,"Bachelor's or higher",52,"Democrat",0.67111226401765
+0,0,"Bachelor's or higher",69,"Democrat",0.343052175388367
+1,0,"Bachelor's or higher",36,"Other / not registered",0.375883778540219
+1,0,"Below bachelor's",62,"Republican",0.698217188842136
+1,1,"Bachelor's or higher",73,"Republican",0.724381910517168
+1,0,"Bachelor's or higher",32,"Democrat",1.58857653901521
+1,1,"Below bachelor's",62,"Democrat",0.578265933294984
+0,0,"Bachelor's or higher",59,"Other / not registered",0.626490843809452
+0,1,"Below bachelor's",56,"Democrat",2.02046978679723
+0,1,"Bachelor's or higher",65,"Democrat",0.340674107876899
+0,0,"Below bachelor's",75,"Democrat",0.378064708253809
+1,0,"Bachelor's or higher",91,"Republican",0.169056851678915
+0,1,"Bachelor's or higher",55,"Democrat",0.524944942533808
+0,1,"Bachelor's or higher",44,"Democrat",0.570775487891911
+1,1,"Bachelor's or higher",60,"Republican",1.73936447950088
+1,1,"Below bachelor's",69,"Republican",0.72395469728597
+0,1,"Bachelor's or higher",42,"Other / not registered",0.526212144299446
+1,0,"Below bachelor's",70,"Democrat",0.562939329148793
+0,0,"Below bachelor's",70,"Democrat",0.590881730323642
+0,1,"Bachelor's or higher",75,"Democrat",0.239164565166405
+0,0,"Bachelor's or higher",65,"Democrat",1.66312859848471
+0,1,"Bachelor's or higher",86,"Other / not registered",0.583713428708811
+0,1,"Bachelor's or higher",38,"Democrat",0.486388546541394
+1,1,"Below bachelor's",67,"Democrat",0.530372307461462
+0,1,"Bachelor's or higher",41,"Other / not registered",0.893547891305648
+0,1,"Below bachelor's",71,"Republican",1.09748768054047
+0,0,"Bachelor's or higher",66,"Republican",0.413868231121184
+1,1,"Bachelor's or higher",68,"Democrat",0.153832157956756
+0,0,"Below bachelor's",69,"Other / not registered",0.74795775678915
+0,1,"Bachelor's or higher",34,"Other / not registered",0.356090066898983
+1,0,"Below bachelor's",51,"Democrat",0.344430311153413
+0,1,"Below bachelor's",62,"Republican",0.746045282863143
+1,1,"Bachelor's or higher",35,"Democrat",1.20612128641727
+0,0,"Bachelor's or higher",76,"Democrat",0.241090827831213
+0,1,"Below bachelor's",55,"Other / not registered",1.7627070778749
+0,0,"Below bachelor's",49,"Other / not registered",0.779332073995477
+1,1,"Below bachelor's",43,"Democrat",0.711210629436968
+1,0,"Below bachelor's",71,"Democrat",1.17276548873136
+0,0,"Bachelor's or higher",39,"Other / not registered",0.555334961862675
+0,1,"Bachelor's or higher",34,"Democrat",0.546947288181612
+1,0,"Bachelor's or higher",63,"Other / not registered",0.558818297962244
+1,0,"Below bachelor's",82,"Republican",1.39486813807269
+0,1,"Bachelor's or higher",60,"Democrat",0.532148536581459
+0,0,"Bachelor's or higher",70,"Republican",0.204978148332056
+1,0,"Bachelor's or higher",44,"Republican",1.30018818728641
+0,1,"Below bachelor's",68,"Democrat",0.920879166039078
+0,1,"Below bachelor's",88,"Other / not registered",0.37992068713349
+0,1,"Bachelor's or higher",67,"Democrat",0.445060697691219
+1,0,"Below bachelor's",34,"Other / not registered",1.7928455859229
+0,1,"Bachelor's or higher",70,"Democrat",0.68986697408165
+1,0,"Bachelor's or higher",74,"Republican",0.464503563313509
+0,1,"Bachelor's or higher",36,"Democrat",0.446970654539224
+1,0,"Bachelor's or higher",62,"Republican",1.05539043650299
+1,0,"Bachelor's or higher",42,"Democrat",1.17787664289024
+1,0,"Bachelor's or higher",82,"Other / not registered",0.583713428708811
+1,1,"Below bachelor's",34,"Republican",1.43063512022386
+0,1,"Below bachelor's",64,"Democrat",1.12476034475484
+0,1,"Bachelor's or higher",41,"Democrat",0.706380433280656
+0,1,"Bachelor's or higher",37,"Democrat",0.758989867804633
+0,1,"Below bachelor's",49,"Republican",3.06250687285129
+0,0,"Below bachelor's",65,"Democrat",0.322977180168231
+0,1,"Bachelor's or higher",75,"Democrat",0.21707036060202
+1,1,"Below bachelor's",73,"Democrat",0.494932535211214
+1,1,"Below bachelor's",92,"Other / not registered",0.435850296322029
+0,1,"Bachelor's or higher",72,"Other / not registered",1.17035563319113
+1,1,"Bachelor's or higher",27,"Democrat",1.32937299650402
+0,1,"Below bachelor's",60,"Republican",0.571293313824605
+1,0,"Bachelor's or higher",68,"Republican",0.464503563313509
+0,1,"Below bachelor's",54,"Democrat",1.1181373677495
+0,1,"Bachelor's or higher",34,"Democrat",0.418445686660431
+0,0,"Below bachelor's",61,"Other / not registered",0.426451475568479
+0,0,"Below bachelor's",62,"Democrat",0.572164061914278
+1,1,"Bachelor's or higher",73,"Other / not registered",0.280524907603319
+1,1,"Bachelor's or higher",60,"Democrat",0.8427153639495
+1,0,"Bachelor's or higher",36,"Republican",0.870652971366176
+0,0,"Bachelor's or higher",64,"Other / not registered",0.399175001244234
+1,1,"Below bachelor's",59,"Republican",1.77395572955619
+1,0,"Bachelor's or higher",73,"Other / not registered",0.565391553951511
+1,1,"Below bachelor's",69,"Republican",0.490577303413296
+1,0,"Bachelor's or higher",35,"Democrat",2.10834000474392
+1,0,"Bachelor's or higher",62,"Other / not registered",0.992845879451913
+1,0,"Bachelor's or higher",76,"Republican",0.943390930457872
+0,1,"Bachelor's or higher",33,"Democrat",0.340022025065412
+1,0,"Below bachelor's",33,"Republican",1.0205992830445
+0,1,"Bachelor's or higher",31,"Democrat",1.42218420800595
+0,1,"Bachelor's or higher",31,"Republican",2.028957001155
+0,0,"Bachelor's or higher",70,"Other / not registered",0.958703015565512
+0,1,"Bachelor's or higher",31,"Democrat",2.15570284719344
+0,1,"Below bachelor's",71,"Republican",0.323938554178875
+0,1,"Bachelor's or higher",59,"Other / not registered",0.46868070582458
+0,0,"Bachelor's or higher",44,"Democrat",0.53517911439074
+0,1,"Bachelor's or higher",63,"Democrat",0.402189805200515
+1,1,"Bachelor's or higher",69,"Other / not registered",1.32452676052152
+1,0,"Below bachelor's",80,"Republican",0.610952279511998
+1,0,"Bachelor's or higher",62,"Republican",0.624783346547652
+0,1,"Bachelor's or higher",63,"Democrat",0.866992159629063
+0,0,"Bachelor's or higher",74,"Democrat",0.768139317498795
+0,0,"Below bachelor's",20,"Democrat",4.61936084967943
+0,1,"Bachelor's or higher",36,"Democrat",0.141618774935417
+0,0,"Below bachelor's",74,"Democrat",0.636814283820259
+0,1,"Bachelor's or higher",30,"Democrat",2.22390088294152
+1,0,"Bachelor's or higher",36,"Republican",0.467982297306774
+0,1,"Below bachelor's",72,"Democrat",0.52122721541266
+0,0,"Below bachelor's",69,"Democrat",0.868409485008006
+0,1,"Bachelor's or higher",31,"Democrat",0.626091573967776
+0,1,"Below bachelor's",38,"Democrat",0.634235051615032
+1,0,"Below bachelor's",36,"Democrat",0.61073304975827
+1,0,"Below bachelor's",21,"Democrat",1.91883730548572
+1,0,"Bachelor's or higher",54,"Other / not registered",0.770728643515248
+0,1,"Bachelor's or higher",79,"Democrat",0.133638767353366
+1,0,"Below bachelor's",81,"Republican",0.942095869032805
+0,1,"Bachelor's or higher",77,"Democrat",0.303883983394674
+1,1,"Bachelor's or higher",50,"Republican",0.957363822018802
+1,1,"Below bachelor's",58,"Other / not registered",0.402190002122899
+0,0,"Below bachelor's",59,"Democrat",0.649960474542006
+0,1,"Below bachelor's",49,"Democrat",0.596016497526456
+0,1,"Bachelor's or higher",80,"Democrat",0.773075191172223
+0,0,"Bachelor's or higher",70,"Republican",0.138680621862806
+1,1,"Bachelor's or higher",38,"Other / not registered",0.941398545036849
+0,0,"Bachelor's or higher",63,"Democrat",0.600738186543086
+1,0,"Below bachelor's",73,"Republican",1.91336465134395
+0,0,"Bachelor's or higher",77,"Democrat",0.552222952475525
+0,0,"Bachelor's or higher",68,"Democrat",0.163851663830669
+0,1,"Bachelor's or higher",41,"Democrat",0.706380433280656
+1,0,"Bachelor's or higher",52,"Other / not registered",1.12974377084057
+0,0,"Bachelor's or higher",44,"Democrat",1.35588687063422
+1,0,"Below bachelor's",70,"Republican",0.707005786683341
+0,1,"Bachelor's or higher",44,"Other / not registered",0.328794921219238
+0,0,"Below bachelor's",45,"Other / not registered",0.474406333346535
+0,0,"Bachelor's or higher",72,"Republican",0.695225977943141
+0,1,"Bachelor's or higher",52,"Democrat",2.48996922378538
+0,0,"Bachelor's or higher",74,"Democrat",0.645742050418063
+0,1,"Below bachelor's",54,"Democrat",0.381735259437332
+1,0,"Below bachelor's",65,"Republican",2.23739344338652
+0,1,"Bachelor's or higher",74,"Democrat",0.343052175388367
+0,1,"Bachelor's or higher",71,"Other / not registered",0.760781589339605
+0,1,"Bachelor's or higher",49,"Other / not registered",1.047439839336
+0,1,"Bachelor's or higher",74,"Democrat",1.45413515871683
+0,0,"Below bachelor's",70,"Democrat",0.717737936855147
+0,1,"Below bachelor's",69,"Democrat",0.586083235821621
+0,1,"Below bachelor's",74,"Democrat",0.717737936855147
+0,0,"Below bachelor's",66,"Democrat",1.28916922800982
+0,1,"Bachelor's or higher",31,"Democrat",1.99096275074703
+0,1,"Bachelor's or higher",74,"Democrat",0.789598644037377
+1,1,"Bachelor's or higher",75,"Republican",0.815895154850417
+0,0,"Bachelor's or higher",42,"Other / not registered",0.854312155750705
+1,1,"Below bachelor's",62,"Democrat",1.12476034475484
+1,1,"Bachelor's or higher",32,"Republican",3.13225364272366
+0,1,"Below bachelor's",69,"Democrat",0.328115771041862
+1,1,"Bachelor's or higher",41,"Other / not registered",0.555334961862675
+0,0,"Bachelor's or higher",43,"Other / not registered",1.41213911966587
+0,0,"Bachelor's or higher",73,"Democrat",1.12424201394675
+0,0,"Bachelor's or higher",69,"Other / not registered",0.760781589339605
+0,1,"Below bachelor's",33,"Democrat",3.66504943068188
+1,0,"Below bachelor's",61,"Other / not registered",4.23270756959161
+1,0,"Below bachelor's",62,"Republican",2.42705311469888
+0,0,"Bachelor's or higher",55,"Other / not registered",0.617224865729646
+0,1,"Below bachelor's",82,"Other / not registered",0.790066110088787
+0,1,"Below bachelor's",81,"Other / not registered",0.491245675892291
+0,1,"Bachelor's or higher",36,"Other / not registered",0.672459664897718
+0,0,"Bachelor's or higher",67,"Democrat",0.690947702161425
+0,1,"Below bachelor's",50,"Democrat",2.07559966312749
+0,0,"Bachelor's or higher",43,"Other / not registered",0.893547891305648
+1,0,"Bachelor's or higher",36,"Republican",3.66330638120975
+0,1,"Below bachelor's",74,"Democrat",0.485068289369018
+0,1,"Bachelor's or higher",44,"Other / not registered",0.656441724702094
+0,0,"Bachelor's or higher",84,"Democrat",0.234433397188291
+1,0,"Below bachelor's",61,"Republican",1.084573289841
+0,1,"Bachelor's or higher",38,"Other / not registered",0.893547891305648
+0,1,"Bachelor's or higher",58,"Democrat",0.193657759840588
+0,1,"Below bachelor's",84,"Democrat",0.836399353558732
+1,0,"Bachelor's or higher",81,"Republican",0.468938767033887
+0,0,"Bachelor's or higher",30,"Democrat",0.439902647920246
+1,0,"Below bachelor's",57,"Democrat",1.29028924561889
+1,1,"Bachelor's or higher",58,"Democrat",0.49082396857489
+0,0,"Bachelor's or higher",74,"Democrat",0.412389537892791
+0,1,"Below bachelor's",59,"Democrat",1.04085987074256
+1,1,"Bachelor's or higher",49,"Democrat",0.804267921538442
+1,0,"Below bachelor's",82,"Republican",0.338220102463627
+0,1,"Bachelor's or higher",26,"Democrat",1.3831203579472
+1,0,"Bachelor's or higher",44,"Other / not registered",1.80095592428306
+0,1,"Below bachelor's",54,"Democrat",0.596016497526456
+0,0,"Bachelor's or higher",39,"Other / not registered",0.893547891305648
+0,1,"Bachelor's or higher",66,"Democrat",0.818350363650923
+0,1,"Bachelor's or higher",31,"Other / not registered",0.664730663355843
+0,1,"Bachelor's or higher",62,"Other / not registered",0.548664250120955
+0,0,"Below bachelor's",19,"Democrat",4.0810876860909
+1,0,"Below bachelor's",76,"Other / not registered",0.993568441270192
+1,1,"Below bachelor's",47,"Other / not registered",2.69715924292841
+0,1,"Bachelor's or higher",72,"Democrat",0.920682196569159
+0,0,"Bachelor's or higher",63,"Other / not registered",0.718964852909951
+0,0,"Bachelor's or higher",62,"Other / not registered",0.728417716485314
+0,1,"Bachelor's or higher",43,"Other / not registered",0.765313615299961
+0,1,"Bachelor's or higher",36,"Republican",0.512729280054408
+1,0,"Below bachelor's",39,"Republican",0.803738579515503
+1,0,"Bachelor's or higher",79,"Republican",0.152367977284101
+0,0,"Bachelor's or higher",59,"Democrat",0.690451713706874
+0,0,"Below bachelor's",74,"Democrat",0.366493658007997
+1,0,"Below bachelor's",60,"Republican",1.65966568639258
+1,0,"Below bachelor's",67,"Democrat",0.546163042654637
+0,1,"Bachelor's or higher",79,"Democrat",0.441963478956097
+0,1,"Bachelor's or higher",72,"Democrat",0.239164565166405
+0,0,"Bachelor's or higher",59,"Other / not registered",0.944398254801142
+1,0,"Bachelor's or higher",54,"Other / not registered",1.20466922194164
+1,0,"Below bachelor's",66,"Republican",1.15986395725545
+1,0,"Bachelor's or higher",62,"Republican",1.65966568639258
+1,1,"Below bachelor's",50,"Democrat",0.958912609416439
+0,1,"Below bachelor's",44,"Other / not registered",0.31171507917296
+1,0,"Bachelor's or higher",27,"Democrat",0.737271301900461
+1,0,"Below bachelor's",65,"Other / not registered",1.12737576063274
+0,1,"Bachelor's or higher",37,"Democrat",0.2895440137621
+0,1,"Below bachelor's",35,"Democrat",0.3848945434201
+0,1,"Bachelor's or higher",60,"Democrat",0.598186030636939
+1,0,"Bachelor's or higher",45,"Republican",1.15756815160822
+0,0,"Bachelor's or higher",65,"Democrat",0.537253488403227
+0,0,"Bachelor's or higher",29,"Democrat",0.427610424104202
+0,1,"Below bachelor's",66,"Other / not registered",0.737918075296447
+0,1,"Below bachelor's",32,"Democrat",1.75292621175658
+0,1,"Bachelor's or higher",44,"Democrat",0.799047499638317
+1,0,"Bachelor's or higher",71,"Democrat",0.62305520335309
+0,0,"Bachelor's or higher",56,"Other / not registered",0.384936303931242
+1,1,"Bachelor's or higher",48,"Republican",1.30384735084007
+0,0,"Bachelor's or higher",63,"Democrat",0.866992159629063
+1,0,"Below bachelor's",53,"Republican",1.40219258828725
+0,1,"Bachelor's or higher",55,"Other / not registered",0.33810299590759
+0,1,"Below bachelor's",24,"Other / not registered",0.790120031845979
+1,0,"Bachelor's or higher",23,"Republican",1.31935838962632
+0,1,"Below bachelor's",21,"Democrat",3.72137100685737
+0,0,"Bachelor's or higher",56,"Republican",0.236565923176307
+1,1,"Bachelor's or higher",28,"Other / not registered",1.80968210049184
+1,0,"Bachelor's or higher",58,"Other / not registered",0.501825637174101
+1,0,"Below bachelor's",46,"Other / not registered",0.998843247946597
+0,1,"Bachelor's or higher",61,"Democrat",1.03347392992995
+0,1,"Bachelor's or higher",22,"Democrat",0.447309237587427
+0,0,"Bachelor's or higher",77,"Democrat",0.144185901593603
+0,1,"Bachelor's or higher",53,"Democrat",0.958912609416439
+0,0,"Bachelor's or higher",45,"Other / not registered",0.550546766911616
+0,1,"Bachelor's or higher",28,"Democrat",0.432759518056818
+0,1,"Below bachelor's",27,"Democrat",0.572507120903949
+0,1,"Below bachelor's",46,"Other / not registered",0.941867064007831
+0,1,"Bachelor's or higher",64,"Democrat",0.524713587373124
+0,0,"Bachelor's or higher",54,"Democrat",0.395658940165999
+1,0,"Below bachelor's",77,"Republican",0.309029366638793
+1,0,"Bachelor's or higher",65,"Democrat",0.646753653513148
+1,1,"Below bachelor's",71,"Democrat",0.81768522053916
+0,1,"Bachelor's or higher",57,"Other / not registered",0.65846667156199
+0,1,"Below bachelor's",42,"Democrat",1.10702117609555
+0,0,"Bachelor's or higher",57,"Republican",0.490171990618397
+0,0,"Bachelor's or higher",60,"Other / not registered",0.617224865729646
+0,1,"Below bachelor's",53,"Democrat",2.16701959445241
+1,0,"Bachelor's or higher",52,"Republican",0.823730088925072
+1,0,"Below bachelor's",19,"Republican",3.60634748586614
+0,1,"Bachelor's or higher",48,"Other / not registered",0.418301330407675
+0,1,"Bachelor's or higher",36,"Other / not registered",2.15701586159931
+0,0,"Below bachelor's",67,"Other / not registered",1.30077652422812
+0,1,"Bachelor's or higher",49,"Democrat",2.81186722061684
+1,0,"Below bachelor's",34,"Democrat",0.825413308734117
+0,1,"Bachelor's or higher",63,"Democrat",0.738230939770593
+0,0,"Below bachelor's",43,"Democrat",0.595252924921955
+1,1,"Below bachelor's",46,"Democrat",0.412445842552229
+1,0,"Bachelor's or higher",64,"Other / not registered",0.597579273442946
+1,0,"Bachelor's or higher",65,"Republican",0.650758284375811
+0,1,"Below bachelor's",22,"Democrat",3.64282171472994
+0,1,"Below bachelor's",59,"Democrat",0.480093383739264
+1,1,"Below bachelor's",43,"Democrat",1.96796416661925
+0,1,"Bachelor's or higher",53,"Other / not registered",0.494414553871909
+0,0,"Below bachelor's",37,"Republican",1.41588432414899
+1,1,"Below bachelor's",34,"Republican",4.505336247734
+0,1,"Bachelor's or higher",34,"Democrat",2.4042570278541
+0,1,"Below bachelor's",19,"Other / not registered",1.79140887540503
+1,0,"Bachelor's or higher",61,"Republican",0.624783346547652
+1,0,"Below bachelor's",36,"Other / not registered",2.17238744397111
+1,0,"Below bachelor's",44,"Republican",1.10926942350742
+0,1,"Bachelor's or higher",63,"Democrat",1.5340910269205
+1,0,"Below bachelor's",79,"Democrat",0.551985416092112
+1,1,"Below bachelor's",55,"Republican",1.23807806694941
+0,1,"Below bachelor's",26,"Democrat",0.68962516220374
+0,1,"Bachelor's or higher",38,"Democrat",0.613771881259137
+0,1,"Bachelor's or higher",42,"Democrat",0.706380433280656
+0,1,"Bachelor's or higher",52,"Democrat",2.31044629371598
+0,0,"Bachelor's or higher",69,"Other / not registered",0.365809042344327
+0,1,"Bachelor's or higher",44,"Democrat",1.35588687063422
+1,0,"Below bachelor's",74,"Republican",0.588391905516205
+1,1,"Below bachelor's",39,"Democrat",1.60264731849479
+1,0,"Bachelor's or higher",62,"Republican",1.22954179406743
+1,1,"Bachelor's or higher",27,"Other / not registered",0.992263035536187
+0,1,"Below bachelor's",55,"Democrat",0.277828989968584
+1,1,"Below bachelor's",76,"Democrat",0.524881662858544
+0,1,"Bachelor's or higher",75,"Democrat",0.697999624481817
+0,0,"Below bachelor's",20,"Democrat",0.803954093919825
+1,1,"Bachelor's or higher",55,"Republican",1.26717178577544
+0,1,"Below bachelor's",47,"Other / not registered",0.962136166942944
+0,1,"Below bachelor's",25,"Democrat",4.22672298493929
+0,0,"Bachelor's or higher",59,"Other / not registered",1.0745933699945
+1,0,"Bachelor's or higher",57,"Other / not registered",1.02144760856219
+0,1,"Bachelor's or higher",54,"Democrat",0.657025196471788
+1,1,"Below bachelor's",58,"Other / not registered",0.471023328526991
+1,0,"Bachelor's or higher",57,"Democrat",0.7105930456142
+0,1,"Bachelor's or higher",39,"Democrat",0.799047499638317
+0,0,"Bachelor's or higher",77,"Democrat",0.220097828386275
+0,1,"Below bachelor's",67,"Democrat",0.541987349967074
+0,1,"Bachelor's or higher",42,"Other / not registered",0.222763224867785
+1,1,"Bachelor's or higher",42,"Democrat",1.03381005246533
+1,0,"Below bachelor's",68,"Other / not registered",0.752178682573757
+0,0,"Bachelor's or higher",51,"Other / not registered",3.60813160326276
+0,1,"Below bachelor's",54,"Other / not registered",2.94109559666345
+1,0,"Bachelor's or higher",80,"Democrat",0.459772183834991
+0,0,"Below bachelor's",78,"Democrat",0.551168306456667
+1,0,"Bachelor's or higher",68,"Other / not registered",0.326127660741271
+1,0,"Bachelor's or higher",41,"Democrat",1.50602911015234
+0,0,"Below bachelor's",42,"Other / not registered",0.955691888733696
+1,0,"Bachelor's or higher",67,"Republican",1.049461142811
+0,1,"Bachelor's or higher",48,"Other / not registered",1.06879176047264
+0,1,"Below bachelor's",49,"Democrat",1.31157827921999
+0,0,"Bachelor's or higher",36,"Other / not registered",2.52121781468253
+1,1,"Below bachelor's",67,"Democrat",0.502496370909423
+0,1,"Bachelor's or higher",57,"Democrat",0.412304371446927
+1,1,"Bachelor's or higher",40,"Democrat",1.29267808430282
+0,1,"Bachelor's or higher",21,"Democrat",4.68817062021437
+1,0,"Below bachelor's",68,"Other / not registered",0.396206191117599
+1,1,"Below bachelor's",61,"Democrat",0.405440204973097
+1,1,"Below bachelor's",47,"Other / not registered",0.697139390451225
+0,1,"Bachelor's or higher",31,"Democrat",0.427610424104202
+1,0,"Bachelor's or higher",46,"Republican",0.998381316968066
+0,1,"Bachelor's or higher",30,"Democrat",2.47603394757509
+1,0,"Bachelor's or higher",68,"Republican",0.673882865347339
+1,0,"Below bachelor's",83,"Democrat",0.619507256048456
+1,1,"Below bachelor's",77,"Democrat",0.551168306456667
+0,1,"Bachelor's or higher",62,"Other / not registered",0.447514843857234
+1,1,"Below bachelor's",68,"Republican",0.47826458353491
+1,0,"Below bachelor's",40,"Republican",0.982835119495601
+0,1,"Below bachelor's",38,"Democrat",0.594321875367092
+0,1,"Bachelor's or higher",23,"Democrat",1.14643106337747
+0,0,"Bachelor's or higher",40,"Other / not registered",0.655414968259599
+0,1,"Below bachelor's",22,"Other / not registered",3.8661397949386
+1,0,"Bachelor's or higher",67,"Republican",0.160231022367507
+0,0,"Below bachelor's",69,"Other / not registered",1.11676025551014
+0,1,"Below bachelor's",65,"Democrat",0.546163042654637
+0,1,"Bachelor's or higher",33,"Democrat",1.29839263050374
+0,1,"Bachelor's or higher",32,"Democrat",1.20502071384165
+1,0,"Below bachelor's",73,"Republican",1.30381057137984
+0,0,"Bachelor's or higher",85,"Democrat",0.239164565166405
+1,0,"Below bachelor's",65,"Other / not registered",0.194531677270725
+0,1,"Bachelor's or higher",72,"Other / not registered",0.401365512853999
+0,1,"Below bachelor's",79,"Democrat",1.14935074700034
+1,1,"Bachelor's or higher",74,"Democrat",0.307915983701748
+0,0,"Bachelor's or higher",77,"Democrat",0.552222952475525
+0,0,"Bachelor's or higher",78,"Other / not registered",0.212736627542944
+1,1,"Below bachelor's",59,"Democrat",0.915888134034957
+1,0,"Bachelor's or higher",67,"Republican",0.650273914546652
+1,0,"Below bachelor's",68,"Other / not registered",0.486556033966117
+0,0,"Below bachelor's",36,"Other / not registered",0.302165469318457
+0,1,"Bachelor's or higher",25,"Democrat",2.79116351874933
+0,1,"Bachelor's or higher",44,"Democrat",0.356572448996424
+1,1,"Bachelor's or higher",59,"Other / not registered",2.41168768855333
+1,0,"Below bachelor's",63,"Republican",0.507067334699994
+1,1,"Below bachelor's",40,"Other / not registered",2.1995049772438
+1,0,"Below bachelor's",30,"Democrat",1.75292621175658
+0,1,"Below bachelor's",61,"Democrat",1.29028924561889
+1,0,"Bachelor's or higher",62,"Republican",0.624783346547652
+1,0,"Below bachelor's",48,"Other / not registered",1.35551536241008
+0,0,"Below bachelor's",59,"Democrat",0.400019620397568
+0,0,"Below bachelor's",60,"Republican",0.571293313824605
+0,1,"Bachelor's or higher",39,"Democrat",0.293032416272667
+1,0,"Below bachelor's",40,"Republican",0.662036937755696
+1,0,"Bachelor's or higher",79,"Republican",0.464503563313509
+0,0,"Below bachelor's",64,"Other / not registered",1.11452666928056
+0,1,"Below bachelor's",52,"Democrat",0.637861976346982
+1,1,"Bachelor's or higher",72,"Republican",0.258400447423993
+1,0,"Bachelor's or higher",54,"Republican",0.764532912181543
+1,0,"Below bachelor's",62,"Democrat",0.509202561270212
+1,0,"Bachelor's or higher",58,"Democrat",0.422545573474532
+0,1,"Bachelor's or higher",35,"Democrat",0.758989867804633
+0,0,"Bachelor's or higher",62,"Other / not registered",0.44089597181059
+0,1,"Bachelor's or higher",38,"Other / not registered",0.594036641224528
+0,0,"Below bachelor's",73,"Republican",0.372411604223363
+0,1,"Bachelor's or higher",75,"Democrat",0.177970289656236
+0,0,"Bachelor's or higher",75,"Democrat",0.773075191172223
+1,0,"Bachelor's or higher",65,"Republican",0.948303736387678
+0,1,"Below bachelor's",68,"Republican",0.218425046917511
+0,0,"Bachelor's or higher",75,"Other / not registered",0.371672951590203
+0,1,"Bachelor's or higher",45,"Democrat",0.686598198159341
+0,1,"Below bachelor's",55,"Democrat",0.60486341569604
+1,1,"Below bachelor's",67,"Democrat",0.235616583116286
+0,0,"Below bachelor's",18,"Other / not registered",0.835026910181238
+0,1,"Bachelor's or higher",72,"Republican",0.650273914546652
+1,1,"Bachelor's or higher",41,"Other / not registered",0.978821017385447
+1,0,"Below bachelor's",69,"Republican",0.442148725001338
+1,0,"Bachelor's or higher",65,"Other / not registered",0.279792880799553
+1,0,"Bachelor's or higher",40,"Republican",1.1348004930761
+0,1,"Bachelor's or higher",31,"Other / not registered",2.07925371526807
+0,0,"Bachelor's or higher",45,"Other / not registered",0.805653001352257
+0,1,"Bachelor's or higher",65,"Democrat",0.417153146094929
+1,1,"Bachelor's or higher",44,"Republican",0.434788485645906
+1,0,"Below bachelor's",82,"Republican",0.707005786683341
+1,0,"Below bachelor's",67,"Republican",0.707005786683341
+0,1,"Bachelor's or higher",73,"Democrat",0.552222952475525
+0,0,"Below bachelor's",37,"Democrat",0.274503130520462
+1,0,"Below bachelor's",71,"Republican",1.27379249898861
+0,0,"Bachelor's or higher",66,"Democrat",0.445060697691219
+1,0,"Bachelor's or higher",68,"Other / not registered",0.91079924598104
+0,1,"Bachelor's or higher",45,"Democrat",0.585697840471168
+0,1,"Below bachelor's",65,"Democrat",1.36243982404893
+1,1,"Below bachelor's",46,"Republican",0.555781492803133
+1,1,"Bachelor's or higher",37,"Democrat",0.381488327059713
+0,1,"Below bachelor's",76,"Other / not registered",0.511345538948963
+1,0,"Bachelor's or higher",70,"Other / not registered",0.807828336821226
+1,1,"Bachelor's or higher",34,"Republican",1.67628711281145
+0,0,"Bachelor's or higher",52,"Democrat",0.219812324737869
+0,1,"Below bachelor's",28,"Other / not registered",1.6638987264895
+0,0,"Below bachelor's",49,"Republican",0.929251942427111
+0,1,"Below bachelor's",35,"Other / not registered",1.1556090913011
+0,1,"Below bachelor's",22,"Democrat",1.07324841202858
+1,1,"Bachelor's or higher",32,"Republican",3.23128702055291
+0,1,"Bachelor's or higher",50,"Democrat",1.35561830920086
+0,0,"Bachelor's or higher",25,"Other / not registered",0.967226636030719
+0,1,"Below bachelor's",39,"Democrat",0.618159226377715
+0,1,"Bachelor's or higher",33,"Democrat",1.47532070510115
+0,1,"Bachelor's or higher",64,"Democrat",0.168850410212346
+1,0,"Bachelor's or higher",34,"Republican",1.4704981163971
+1,1,"Bachelor's or higher",54,"Republican",0.527067412096552
+0,1,"Below bachelor's",76,"Democrat",0.290909797247875
+1,0,"Bachelor's or higher",40,"Democrat",1.25274055293959
+0,0,"Bachelor's or higher",66,"Democrat",0.22225533379394
+0,0,"Bachelor's or higher",52,"Other / not registered",0.983215722000063
+1,0,"Below bachelor's",27,"Other / not registered",2.34913548418985
+1,1,"Bachelor's or higher",23,"Democrat",1.26159031775744
+1,1,"Bachelor's or higher",59,"Other / not registered",0.324458654229584
+1,1,"Below bachelor's",29,"Other / not registered",0.799325504173501
+0,0,"Below bachelor's",63,"Other / not registered",1.47984034255896
+1,0,"Bachelor's or higher",39,"Democrat",0.758989867804633
+1,0,"Below bachelor's",83,"Republican",0.734739503924836
+1,1,"Bachelor's or higher",66,"Other / not registered",0.403870408458461
+1,0,"Bachelor's or higher",39,"Republican",2.0611328111823
+0,1,"Below bachelor's",23,"Democrat",0.630616473512399
+1,1,"Bachelor's or higher",36,"Republican",1.69763101080446
+0,1,"Bachelor's or higher",62,"Democrat",0.966586209747932
+1,0,"Below bachelor's",72,"Republican",0.370972871907816
+0,1,"Bachelor's or higher",35,"Other / not registered",2.02512667886653
+0,0,"Bachelor's or higher",50,"Other / not registered",0.575493928867261
+1,0,"Bachelor's or higher",53,"Republican",1.30384735084007
+1,0,"Bachelor's or higher",57,"Republican",0.456672821060042
+0,1,"Bachelor's or higher",40,"Democrat",0.706380433280656
+1,0,"Below bachelor's",69,"Republican",0.550739075723932
+0,1,"Bachelor's or higher",76,"Democrat",0.141080425460349
+0,1,"Bachelor's or higher",46,"Democrat",0.913625684147683
+1,0,"Bachelor's or higher",69,"Other / not registered",0.577047814167186
+0,1,"Bachelor's or higher",26,"Other / not registered",3.96541918132455
+0,0,"Below bachelor's",34,"Democrat",1.2020871764468
+1,0,"Below bachelor's",61,"Republican",0.829387096339899
+1,1,"Below bachelor's",40,"Republican",1.69730871022057
+1,1,"Below bachelor's",41,"Democrat",0.524280839289103
+1,1,"Bachelor's or higher",62,"Democrat",0.600738186543086
+1,1,"Below bachelor's",65,"Republican",1.06492234500944
+0,0,"Bachelor's or higher",66,"Democrat",0.645742050418063
+0,1,"Below bachelor's",39,"Democrat",0.773726200168289
+1,1,"Below bachelor's",61,"Republican",2.07419406972914
+1,0,"Below bachelor's",61,"Republican",0.69155805914876
+0,1,"Below bachelor's",26,"Democrat",0.580028882961266
+0,1,"Below bachelor's",63,"Other / not registered",2.00807730409071
+1,1,"Below bachelor's",20,"Democrat",0.717786922237845
+0,1,"Below bachelor's",57,"Democrat",1.20664151228445
+1,0,"Below bachelor's",57,"Republican",0.884418419154907
+1,0,"Below bachelor's",60,"Republican",1.27516176295781
+0,1,"Below bachelor's",39,"Democrat",2.312392940493
+0,1,"Below bachelor's",63,"Democrat",0.415834129591522
+1,0,"Below bachelor's",53,"Republican",0.402221395455846
+1,0,"Bachelor's or higher",54,"Republican",0.676121489770501
+1,1,"Bachelor's or higher",56,"Republican",0.926213730528148
+0,0,"Below bachelor's",47,"Democrat",0.236120722955872
+0,0,"Below bachelor's",55,"Democrat",0.688165368593311
+0,1,"Below bachelor's",44,"Republican",1.5199890193227
+1,1,"Below bachelor's",52,"Democrat",1.32363141688971
+1,1,"Below bachelor's",27,"Republican",0.837107733226248
+1,0,"Bachelor's or higher",67,"Republican",0.220575498251537
+1,0,"Below bachelor's",58,"Republican",0.487878243341994
+1,1,"Below bachelor's",51,"Republican",2.308500070331
+1,0,"Bachelor's or higher",77,"Other / not registered",0.489910531577862
+0,1,"Bachelor's or higher",59,"Democrat",0.840993273322579
+1,1,"Bachelor's or higher",23,"Democrat",2.44399640018039
+1,1,"Below bachelor's",54,"Democrat",0.471156826572914
+0,0,"Below bachelor's",31,"Other / not registered",1.47395933513566
+0,1,"Below bachelor's",46,"Democrat",0.286897267528291
+0,0,"Below bachelor's",22,"Other / not registered",2.30551190078912
+1,0,"Bachelor's or higher",48,"Republican",0.915801818373676
+1,0,"Bachelor's or higher",36,"Other / not registered",0.275327530545798
+0,1,"Bachelor's or higher",37,"Republican",1.21265152433485
+0,0,"Bachelor's or higher",39,"Democrat",0.570775487891911
+1,1,"Bachelor's or higher",47,"Democrat",1.24553092553415
+0,1,"Below bachelor's",46,"Democrat",1.20471202527621
+0,1,"Bachelor's or higher",73,"Democrat",0.484123462176735
+0,0,"Bachelor's or higher",54,"Democrat",0.834541404818595
+0,0,"Below bachelor's",78,"Democrat",0.361520874770752
+0,1,"Bachelor's or higher",61,"Other / not registered",1.17367333250704
+0,1,"Below bachelor's",51,"Democrat",1.90704385733588
+1,0,"Bachelor's or higher",81,"Republican",0.320801094847805
+1,1,"Bachelor's or higher",51,"Democrat",1.24553092553415
+0,1,"Below bachelor's",53,"Democrat",0.44581850270603
+1,0,"Bachelor's or higher",63,"Republican",1.14113583577146
+0,1,"Below bachelor's",38,"Democrat",4.16455148087351
+0,0,"Below bachelor's",63,"Republican",0.920330354523808
+0,1,"Below bachelor's",44,"Other / not registered",2.25979075689571
+1,0,"Below bachelor's",71,"Republican",0.67096354362443
+1,1,"Below bachelor's",64,"Democrat",0.482947035767089
+1,1,"Below bachelor's",26,"Other / not registered",2.95483467106158
+1,1,"Below bachelor's",55,"Democrat",1.14168076890493
+0,0,"Bachelor's or higher",30,"Democrat",0.358582831570954
+0,0,"Bachelor's or higher",56,"Democrat",0.380124261368358
+1,1,"Below bachelor's",57,"Democrat",0.67965311872094
+1,0,"Bachelor's or higher",44,"Other / not registered",1.17075759194111
+0,1,"Below bachelor's",71,"Democrat",0.291920735521976
+1,0,"Below bachelor's",65,"Other / not registered",0.33737937891568
+1,1,"Below bachelor's",59,"Democrat",0.312577859994574
+0,0,"Below bachelor's",44,"Other / not registered",0.373464737215687
+1,0,"Bachelor's or higher",68,"Republican",0.488004921394791
+1,1,"Below bachelor's",49,"Other / not registered",1.60047574869075
+0,1,"Below bachelor's",71,"Democrat",0.97321780701009
+0,0,"Below bachelor's",29,"Democrat",1.89515181943891
+1,1,"Below bachelor's",53,"Democrat",0.230856945619284
+1,1,"Below bachelor's",52,"Democrat",0.736842559348113
+0,1,"Below bachelor's",26,"Democrat",1.25516604159124
+0,1,"Bachelor's or higher",27,"Democrat",0.478010738573724
+0,1,"Bachelor's or higher",24,"Democrat",0.523585322101729
+1,1,"Bachelor's or higher",60,"Republican",1.11919571184258
+1,1,"Below bachelor's",55,"Other / not registered",1.06675304733533
+1,0,"Below bachelor's",56,"Republican",1.14201720589025
+1,1,"Below bachelor's",67,"Republican",0.258400447423993
+1,0,"Bachelor's or higher",28,"Republican",1.1612235103831
+1,0,"Below bachelor's",71,"Republican",1.06492234500944
+0,1,"Bachelor's or higher",73,"Democrat",0.888286122847563
+0,0,"Bachelor's or higher",62,"Democrat",0.307150684769895
+1,0,"Bachelor's or higher",65,"Republican",1.373871860233
+0,1,"Bachelor's or higher",26,"Other / not registered",1.58888802997562
+1,0,"Below bachelor's",46,"Other / not registered",0.622123714439578
+0,1,"Below bachelor's",31,"Democrat",2.11137571599856
+0,1,"Bachelor's or higher",48,"Democrat",1.968403665673
+0,1,"Bachelor's or higher",52,"Other / not registered",1.34113249139364
+0,0,"Bachelor's or higher",41,"Republican",0.280689193979566
+0,1,"Bachelor's or higher",32,"Democrat",3.61114345690172
+0,1,"Bachelor's or higher",36,"Other / not registered",0.868379144336371
+1,1,"Bachelor's or higher",41,"Republican",2.34291290419576
+1,1,"Bachelor's or higher",29,"Other / not registered",2.25232323794506
+0,1,"Bachelor's or higher",44,"Other / not registered",0.672459664897718
+0,1,"Bachelor's or higher",39,"Democrat",0.556308159147261
+0,1,"Bachelor's or higher",48,"Democrat",0.270701568890565
+0,1,"Below bachelor's",77,"Democrat",0.337275959709072
+1,0,"Below bachelor's",38,"Republican",0.786689278394874
+0,0,"Bachelor's or higher",43,"Other / not registered",0.327302485480636
+1,0,"Bachelor's or higher",62,"Republican",0.63931139924829
+0,1,"Bachelor's or higher",35,"Democrat",0.788369992471067
+0,0,"Bachelor's or higher",52,"Other / not registered",1.0131976313845
+0,1,"Below bachelor's",71,"Democrat",0.322977180168231
+0,1,"Bachelor's or higher",38,"Other / not registered",0.656441724702094
+1,0,"Below bachelor's",66,"Republican",0.368152696221792
+0,1,"Below bachelor's",59,"Other / not registered",0.545665248976874
+0,1,"Below bachelor's",44,"Democrat",1.80134666712414
+0,0,"Below bachelor's",40,"Democrat",0.581141969969903
+1,1,"Below bachelor's",33,"Democrat",4.04819597358572
+1,0,"Bachelor's or higher",54,"Republican",1.10274476086521
+1,1,"Below bachelor's",40,"Democrat",0.585140336091187
+1,0,"Below bachelor's",67,"Republican",1.36173929710672
+1,1,"Bachelor's or higher",63,"Republican",0.811478743896315
+1,1,"Bachelor's or higher",32,"Other / not registered",2.07925371526807
+0,1,"Bachelor's or higher",35,"Other / not registered",0.765313615299961
+1,0,"Bachelor's or higher",64,"Republican",0.490171990618397
+1,1,"Below bachelor's",39,"Republican",0.650952414694231
+1,1,"Bachelor's or higher",40,"Other / not registered",1.63898230804942
+1,1,"Bachelor's or higher",46,"Republican",0.902175321495956
+0,0,"Bachelor's or higher",47,"Democrat",1.03786615204756
+1,1,"Bachelor's or higher",56,"Democrat",0.556138069373107
+0,0,"Bachelor's or higher",68,"Other / not registered",1.13270318675158
+1,0,"Bachelor's or higher",69,"Other / not registered",0.47350665469921
+0,1,"Bachelor's or higher",39,"Democrat",0.76952305660324
+0,0,"Bachelor's or higher",72,"Other / not registered",0.545336625544838
+0,1,"Bachelor's or higher",71,"Democrat",0.281780848985325
+1,0,"Bachelor's or higher",61,"Republican",1.14201720589025
+1,1,"Below bachelor's",51,"Republican",2.56155848179268
+0,0,"Bachelor's or higher",76,"Democrat",0.806562788834667
+0,1,"Below bachelor's",58,"Republican",0.994156006431972
+0,1,"Bachelor's or higher",46,"Other / not registered",0.447543868000044
+1,0,"Below bachelor's",77,"Republican",1.59821454273138
+0,0,"Below bachelor's",43,"Democrat",1.07946839794029
+0,0,"Below bachelor's",36,"Democrat",0.62062324685397
+1,1,"Below bachelor's",44,"Democrat",2.1070261605462
+1,0,"Bachelor's or higher",78,"Other / not registered",0.403870408458461
+0,0,"Below bachelor's",35,"Other / not registered",0.534889634881404
+0,1,"Below bachelor's",41,"Democrat",0.621641724684609
+1,0,"Below bachelor's",59,"Republican",2.2621771069986
+0,1,"Bachelor's or higher",71,"Democrat",0.343052175388367
+0,1,"Below bachelor's",40,"Democrat",1.01033997975693
+1,1,"Bachelor's or higher",70,"Democrat",0.303883983394674
+0,1,"Bachelor's or higher",64,"Other / not registered",1.32209437891024
+1,1,"Below bachelor's",22,"Democrat",1.43955512350011
+0,1,"Bachelor's or higher",42,"Democrat",1.03381005246533
+0,0,"Below bachelor's",51,"Democrat",0.669911788439293
+1,1,"Bachelor's or higher",23,"Other / not registered",2.83257762390967
+0,0,"Bachelor's or higher",41,"Democrat",0.776102450502372
+1,0,"Bachelor's or higher",29,"Republican",2.40412879617181
+1,0,"Below bachelor's",74,"Republican",0.760848342735526
+0,0,"Below bachelor's",71,"Other / not registered",1.40918893635239
+1,1,"Below bachelor's",50,"Other / not registered",1.25552747979759
+1,0,"Below bachelor's",19,"Democrat",2.33270448496013
+1,0,"Below bachelor's",82,"Republican",0.174080396269829
+0,1,"Below bachelor's",20,"Democrat",1.76100196462198
+1,1,"Bachelor's or higher",40,"Republican",1.45650212817112
+0,1,"Bachelor's or higher",31,"Democrat",2.22390088294152
+0,1,"Below bachelor's",28,"Republican",2.51480925845857
+0,1,"Below bachelor's",59,"Democrat",0.362627101153328
+0,0,"Below bachelor's",30,"Other / not registered",1.46075465503786
+0,1,"Bachelor's or higher",34,"Other / not registered",0.599918853971373
+0,1,"Below bachelor's",77,"Democrat",0.546163042654637
+0,0,"Below bachelor's",77,"Republican",0.931337768198768
+1,1,"Bachelor's or higher",73,"Other / not registered",0.357758257497273
+1,0,"Bachelor's or higher",47,"Other / not registered",0.942776407767397
+0,1,"Bachelor's or higher",37,"Democrat",1.17787664289024
+0,1,"Below bachelor's",20,"Democrat",1.75292621175658
+1,1,"Below bachelor's",38,"Democrat",0.379717712684768
+0,1,"Below bachelor's",52,"Democrat",0.442642862780998
+1,1,"Below bachelor's",89,"Democrat",0.636017588200537
+1,1,"Below bachelor's",61,"Republican",0.228411483981805
+0,1,"Bachelor's or higher",25,"Democrat",2.22135809684034
+0,1,"Bachelor's or higher",59,"Other / not registered",0.65846667156199
+1,0,"Below bachelor's",43,"Republican",1.69597885519453
+0,1,"Below bachelor's",25,"Democrat",1.34779745949418
+0,1,"Below bachelor's",24,"Democrat",1.02459233313122
+1,0,"Bachelor's or higher",55,"Democrat",1.14168076890493
+1,1,"Below bachelor's",48,"Republican",2.3477541613992
+0,0,"Below bachelor's",49,"Republican",2.3733131156406
+1,1,"Below bachelor's",72,"Democrat",0.412982773793584
+1,1,"Bachelor's or higher",59,"Republican",1.3953910933913
+1,1,"Below bachelor's",65,"Republican",0.485911711345439
+1,0,"Bachelor's or higher",24,"Other / not registered",0.583223942732644
+0,1,"Below bachelor's",56,"Democrat",0.866632623221674
+1,1,"Bachelor's or higher",52,"Democrat",0.513914103372298
+0,1,"Bachelor's or higher",57,"Democrat",0.161790018424125
+1,1,"Bachelor's or higher",41,"Democrat",0.458497197623926
+1,1,"Below bachelor's",29,"Republican",3.85247825074728
+1,1,"Bachelor's or higher",38,"Democrat",0.557179657379799
+0,1,"Below bachelor's",43,"Democrat",0.442892315892927
+0,1,"Below bachelor's",44,"Other / not registered",0.466295012399461
+0,1,"Bachelor's or higher",23,"Democrat",0.842220653206641
+1,0,"Below bachelor's",75,"Republican",0.513528753343585
+1,1,"Below bachelor's",36,"Republican",0.434788485645906
+1,0,"Below bachelor's",63,"Republican",0.718331306560412
+0,0,"Bachelor's or higher",54,"Republican",0.32668347481305
+0,0,"Below bachelor's",39,"Democrat",0.890268389800115
+0,1,"Bachelor's or higher",58,"Democrat",0.197122156498218
+1,1,"Below bachelor's",34,"Other / not registered",0.838049261915275
+1,0,"Below bachelor's",54,"Republican",1.69149833657782
+1,1,"Below bachelor's",36,"Other / not registered",0.319339199158084
+0,0,"Bachelor's or higher",43,"Democrat",3.54424541819129
+0,0,"Below bachelor's",76,"Republican",1.26813760113381
+0,1,"Below bachelor's",58,"Democrat",0.54729035761759
+0,1,"Bachelor's or higher",23,"Democrat",1.62601278203362
+0,1,"Bachelor's or higher",66,"Democrat",0.480250096236561
+0,0,"Below bachelor's",59,"Democrat",0.463153948062905
+1,1,"Bachelor's or higher",32,"Other / not registered",1.23640311277969
+1,1,"Below bachelor's",57,"Democrat",1.67817815919803
+0,1,"Bachelor's or higher",57,"Democrat",0.559264603407522
+1,1,"Bachelor's or higher",25,"Democrat",0.611810475720725
+0,0,"Bachelor's or higher",54,"Other / not registered",0.703430757488505
+0,0,"Below bachelor's",65,"Democrat",0.47400266902493
+1,0,"Bachelor's or higher",61,"Republican",0.398087081171699
+1,0,"Below bachelor's",44,"Democrat",2.10162725490994
+1,0,"Bachelor's or higher",63,"Republican",0.540741390371048
+1,0,"Below bachelor's",32,"Democrat",1.24086049565667
+1,0,"Below bachelor's",58,"Other / not registered",0.324458654229584
+1,0,"Below bachelor's",57,"Republican",0.910873355742682
+0,0,"Below bachelor's",40,"Republican",0.884135355790307
+1,0,"Bachelor's or higher",55,"Republican",1.32351056270802
+0,0,"Bachelor's or higher",58,"Democrat",0.616257542153513
+0,0,"Below bachelor's",30,"Republican",1.75766629736741
+1,1,"Below bachelor's",33,"Republican",1.76646254235215
+1,0,"Bachelor's or higher",59,"Republican",0.795070991165735
+0,1,"Bachelor's or higher",44,"Other / not registered",0.656441724702094
+0,0,"Bachelor's or higher",60,"Other / not registered",0.433782711636976
+0,0,"Bachelor's or higher",62,"Other / not registered",0.944398254801142
+0,1,"Bachelor's or higher",28,"Democrat",0.563275904939557
+1,0,"Bachelor's or higher",68,"Republican",1.37192310878435
+0,1,"Bachelor's or higher",33,"Other / not registered",1.35405258547172
+0,1,"Bachelor's or higher",36,"Democrat",1.10386141026623
+1,1,"Bachelor's or higher",35,"Republican",0.283440023695141
+1,0,"Below bachelor's",43,"Republican",0.403628265490558
+1,0,"Below bachelor's",76,"Republican",0.55279817382793
+0,1,"Below bachelor's",62,"Democrat",1.33060324648296
+0,0,"Below bachelor's",27,"Democrat",1.13744017893943
+0,1,"Bachelor's or higher",52,"Democrat",0.724085756400883
+1,0,"Bachelor's or higher",59,"Other / not registered",0.558818297962244
+0,1,"Bachelor's or higher",31,"Democrat",2.79116351874933
+1,0,"Below bachelor's",66,"Republican",1.31985358104894
+1,0,"Below bachelor's",59,"Other / not registered",0.529164572414152
+0,0,"Bachelor's or higher",56,"Other / not registered",1.43840308013891
+0,0,"Bachelor's or higher",34,"Other / not registered",2.07925371526807
+1,1,"Bachelor's or higher",39,"Democrat",0.140537496276295
+1,1,"Below bachelor's",66,"Republican",0.838373449772225
+1,0,"Bachelor's or higher",63,"Other / not registered",0.447514843857234
+0,1,"Bachelor's or higher",37,"Other / not registered",0.917537109989795
+0,0,"Bachelor's or higher",74,"Other / not registered",0.534537839542745
+0,1,"Below bachelor's",23,"Other / not registered",1.83693911698167
+1,0,"Bachelor's or higher",64,"Other / not registered",0.145320596212986
+1,0,"Below bachelor's",65,"Republican",0.393515620611875
+1,1,"Bachelor's or higher",50,"Other / not registered",0.492483050943806
+0,1,"Below bachelor's",25,"Democrat",0.995659736399866
+1,0,"Bachelor's or higher",65,"Republican",0.308790941619314
+0,1,"Below bachelor's",20,"Other / not registered",2.38308808683865
+0,1,"Bachelor's or higher",68,"Democrat",0.417845299504153
+1,0,"Below bachelor's",84,"Republican",0.707005786683341
+0,0,"Below bachelor's",35,"Democrat",2.44622855717326
+1,1,"Below bachelor's",43,"Other / not registered",0.280666930383617
+1,1,"Below bachelor's",38,"Other / not registered",1.20933025892718
+0,0,"Below bachelor's",19,"Other / not registered",1.38121042582153
+0,1,"Bachelor's or higher",34,"Other / not registered",2.27524472729067
+0,1,"Bachelor's or higher",40,"Other / not registered",1.98783403023008
+0,1,"Below bachelor's",65,"Democrat",0.356445212325889
+1,0,"Below bachelor's",23,"Other / not registered",1.21231540987896
+0,1,"Below bachelor's",33,"Democrat",0.657624026019875
+0,0,"Bachelor's or higher",43,"Other / not registered",1.80881665131546
+0,0,"Bachelor's or higher",41,"Democrat",0.556308159147261
+1,0,"Bachelor's or higher",48,"Other / not registered",2.31737341868331
+0,1,"Below bachelor's",41,"Republican",0.419024358298894
+0,1,"Bachelor's or higher",78,"Democrat",0.146328746305571
+0,0,"Below bachelor's",35,"Democrat",0.379717712684768
+0,1,"Below bachelor's",43,"Republican",0.53655009009977
+1,1,"Below bachelor's",19,"Other / not registered",0.835026910181238
+0,0,"Bachelor's or higher",79,"Democrat",0.180700941031925
+1,0,"Below bachelor's",37,"Democrat",0.657186588248205
+0,0,"Bachelor's or higher",67,"Democrat",0.215210575176993
+0,0,"Below bachelor's",78,"Democrat",0.28864366033963
+0,1,"Below bachelor's",49,"Democrat",0.91143557635597
+1,1,"Below bachelor's",35,"Other / not registered",1.19033297440547
+1,1,"Below bachelor's",76,"Democrat",0.48216616267485
+1,1,"Below bachelor's",19,"Democrat",0.927598584110453
+1,0,"Bachelor's or higher",68,"Republican",0.911018064072654
+0,0,"Below bachelor's",60,"Other / not registered",0.248237198784342
+0,1,"Bachelor's or higher",47,"Other / not registered",0.686277148055898
+0,1,"Below bachelor's",48,"Democrat",2.29018326750958
+1,0,"Bachelor's or higher",24,"Republican",1.44009670293618
+0,1,"Bachelor's or higher",49,"Democrat",0.698774079214932
+1,0,"Bachelor's or higher",61,"Republican",0.686207995621806
+1,1,"Bachelor's or higher",24,"Other / not registered",1.35126320717475
+1,1,"Bachelor's or higher",54,"Other / not registered",0.4793298836671
+1,1,"Bachelor's or higher",56,"Democrat",0.598815595491881
+0,0,"Bachelor's or higher",50,"Democrat",1.45294318229358
+0,1,"Below bachelor's",21,"Democrat",0.749481225275434
+0,1,"Bachelor's or higher",22,"Democrat",1.09969326720442
+1,0,"Bachelor's or higher",59,"Republican",1.11304619943008
+1,0,"Bachelor's or higher",68,"Republican",0.459199245211545
+1,0,"Bachelor's or higher",47,"Other / not registered",0.252656891838023
+1,1,"Bachelor's or higher",57,"Republican",0.815135975906591
+0,0,"Below bachelor's",19,"Democrat",0.992908196676746
+0,1,"Below bachelor's",26,"Democrat",3.39264405459132
+1,1,"Below bachelor's",48,"Other / not registered",0.6174964206437
+0,0,"Below bachelor's",28,"Other / not registered",1.21231540987896
+0,1,"Bachelor's or higher",27,"Democrat",2.03618042562938
+0,1,"Below bachelor's",50,"Other / not registered",0.367729905001918
+1,1,"Below bachelor's",31,"Democrat",0.657624026019875
+1,1,"Bachelor's or higher",32,"Other / not registered",3.9376939533375
+1,0,"Below bachelor's",59,"Republican",0.426873206190816
+0,1,"Below bachelor's",33,"Other / not registered",2.8793966018873
+0,1,"Bachelor's or higher",47,"Democrat",0.335915187277631
+0,1,"Below bachelor's",47,"Other / not registered",0.290559154702895
+0,1,"Below bachelor's",43,"Democrat",0.327368860135525
+0,0,"Below bachelor's",41,"Democrat",0.293807510942181
+1,1,"Below bachelor's",39,"Democrat",0.568604338687568
+1,0,"Below bachelor's",63,"Democrat",0.748905002200409
+1,0,"Below bachelor's",43,"Other / not registered",0.495924463295586
+0,0,"Below bachelor's",61,"Other / not registered",0.50481835545112
+1,0,"Bachelor's or higher",48,"Other / not registered",0.201350341593194
+0,1,"Below bachelor's",61,"Other / not registered",0.64428662155461
+0,1,"Bachelor's or higher",39,"Democrat",1.35588687063422
+1,1,"Below bachelor's",37,"Other / not registered",1.0545467514543
+0,1,"Below bachelor's",21,"Democrat",0.838394636202108
+1,0,"Bachelor's or higher",64,"Republican",0.963157209843888
+1,0,"Below bachelor's",59,"Republican",0.516138574094258
+0,1,"Bachelor's or higher",67,"Democrat",1.5738636106297
+1,1,"Below bachelor's",67,"Republican",0.147426972914025
+1,1,"Bachelor's or higher",54,"Democrat",0.216639089461863
+1,0,"Bachelor's or higher",76,"Republican",0.488004921394791
+1,0,"Below bachelor's",55,"Other / not registered",2.51337312329066
+1,1,"Bachelor's or higher",55,"Other / not registered",0.432775344194654
+0,1,"Bachelor's or higher",38,"Democrat",1.11486017897063
+0,0,"Bachelor's or higher",53,"Republican",0.641117150157312
+1,1,"Below bachelor's",38,"Democrat",0.986482508708435
+1,1,"Bachelor's or higher",28,"Democrat",0.483683045112333
+1,0,"Bachelor's or higher",72,"Republican",0.385072384397897
+1,0,"Below bachelor's",20,"Other / not registered",4.61896039173847
+0,1,"Below bachelor's",21,"Democrat",2.12180395423252
+1,1,"Below bachelor's",70,"Other / not registered",0.601201202315004
+1,0,"Below bachelor's",47,"Other / not registered",1.46177365810415
+0,1,"Bachelor's or higher",36,"Democrat",0.894857440427174
+1,0,"Bachelor's or higher",56,"Other / not registered",0.707240455481976
+0,0,"Below bachelor's",58,"Democrat",0.756243605090879
+0,1,"Bachelor's or higher",70,"Democrat",0.445060697691219
+0,0,"Bachelor's or higher",30,"Other / not registered",1.55472216731416
+1,0,"Below bachelor's",74,"Democrat",1.1594779354543
+0,1,"Bachelor's or higher",71,"Other / not registered",0.389544775062277
+0,1,"Bachelor's or higher",66,"Democrat",0.402202004785254
+0,1,"Bachelor's or higher",55,"Other / not registered",0.626490843809452
+1,1,"Bachelor's or higher",45,"Democrat",0.889707460480148
+0,1,"Bachelor's or higher",46,"Democrat",0.299580924532211
+0,1,"Bachelor's or higher",27,"Other / not registered",0.72674064907282
+0,0,"Bachelor's or higher",73,"Republican",0.488004921394791
+0,1,"Below bachelor's",70,"Democrat",0.334160511004142
+1,0,"Below bachelor's",66,"Republican",0.242349156416522
+1,1,"Bachelor's or higher",44,"Republican",0.256830565420297
+0,0,"Below bachelor's",34,"Other / not registered",0.810794721041107
+1,1,"Bachelor's or higher",49,"Other / not registered",0.259412873995251
+1,0,"Bachelor's or higher",50,"Democrat",0.514900004231173
+0,0,"Bachelor's or higher",65,"Democrat",0.454042595946707
+1,0,"Below bachelor's",65,"Republican",1.51608144952973
+1,0,"Below bachelor's",38,"Republican",1.19696095566467
+1,0,"Bachelor's or higher",77,"Democrat",0.445060697691219
+1,0,"Below bachelor's",81,"Democrat",0.623488056778178
+1,0,"Bachelor's or higher",79,"Republican",0.788005100585304
+1,0,"Below bachelor's",64,"Other / not registered",1.43440947313627
+1,0,"Below bachelor's",27,"Democrat",2.50802730491149
+1,0,"Bachelor's or higher",43,"Other / not registered",0.884472602344428
+0,1,"Bachelor's or higher",24,"Democrat",1.15014785759946
+0,0,"Below bachelor's",20,"Democrat",0.803954093919825
+1,1,"Bachelor's or higher",31,"Democrat",1.26159031775744
+0,1,"Below bachelor's",27,"Democrat",2.42343298286956
+0,1,"Bachelor's or higher",23,"Democrat",0.817805800465313
+0,0,"Bachelor's or higher",73,"Democrat",0.327027661488202
+1,1,"Below bachelor's",23,"Democrat",1.05229475696476
+1,1,"Below bachelor's",74,"Democrat",0.366493658007997
+1,0,"Bachelor's or higher",31,"Republican",0.422841247726404
+0,1,"Below bachelor's",20,"Other / not registered",2.55947873584794
+1,1,"Bachelor's or higher",60,"Other / not registered",0.626490843809452
+0,0,"Below bachelor's",77,"Democrat",0.31199898554416
+1,1,"Bachelor's or higher",43,"Democrat",0.758989867804633
+1,1,"Below bachelor's",41,"Other / not registered",0.345904890560744
+0,1,"Below bachelor's",61,"Democrat",1.13428811785215
+0,0,"Bachelor's or higher",37,"Democrat",0.706380433280656
+0,1,"Bachelor's or higher",23,"Other / not registered",1.62525246606823
+0,1,"Bachelor's or higher",33,"Other / not registered",0.912882483317854
+0,1,"Below bachelor's",30,"Other / not registered",0.765037285433242
+0,1,"Bachelor's or higher",30,"Democrat",1.83483459583733
+0,0,"Bachelor's or higher",33,"Other / not registered",1.58638959503265
+0,1,"Below bachelor's",21,"Democrat",2.30300659411871
+1,1,"Below bachelor's",60,"Democrat",0.616257542153513
+1,0,"Below bachelor's",67,"Republican",0.55279817382793
+0,1,"Below bachelor's",36,"Other / not registered",4.08037933190657
+1,1,"Bachelor's or higher",62,"Republican",0.24139336813627
+0,0,"Below bachelor's",64,"Democrat",0.326849807847935
+0,1,"Bachelor's or higher",51,"Democrat",0.219812324737869
+1,1,"Below bachelor's",59,"Other / not registered",0.68583423283332
+1,1,"Below bachelor's",40,"Other / not registered",0.395504098435895
+1,1,"Below bachelor's",43,"Other / not registered",0.853590796138091
+0,0,"Below bachelor's",22,"Democrat",0.433597469225021
+1,0,"Bachelor's or higher",57,"Other / not registered",1.90852311040991
+1,0,"Bachelor's or higher",67,"Democrat",0.153832157956756
+1,0,"Below bachelor's",42,"Other / not registered",2.13826156143418
+1,0,"Bachelor's or higher",27,"Republican",0.318446952551364
+1,0,"Bachelor's or higher",64,"Republican",0.329101363471675
+1,1,"Bachelor's or higher",52,"Republican",0.378190318209054
+1,1,"Below bachelor's",45,"Other / not registered",1.06988514827636
+0,0,"Below bachelor's",32,"Republican",3.47974316090231
+1,0,"Below bachelor's",47,"Other / not registered",2.17173891984261
+0,1,"Below bachelor's",18,"Other / not registered",0.756829498144552
+1,0,"Below bachelor's",55,"Democrat",0.771686338854457
+0,1,"Bachelor's or higher",59,"Democrat",0.869045295804526
+0,1,"Bachelor's or higher",34,"Democrat",2.47603394757509
+0,0,"Below bachelor's",44,"Other / not registered",0.567607973752029
+0,1,"Bachelor's or higher",24,"Other / not registered",1.44716097763891
+0,1,"Bachelor's or higher",51,"Other / not registered",1.12974377084057
+0,0,"Bachelor's or higher",69,"Democrat",0.443684749233359
+1,1,"Below bachelor's",58,"Democrat",0.295774063119644
+0,1,"Bachelor's or higher",26,"Democrat",0.374325769482361
+1,0,"Below bachelor's",64,"Republican",0.855564510234664
+0,0,"Bachelor's or higher",78,"Democrat",0.548697159947047
+1,0,"Bachelor's or higher",42,"Other / not registered",0.567607973752029
+0,0,"Below bachelor's",41,"Democrat",0.672171671879225
+0,0,"Below bachelor's",19,"Republican",4.29396096123643
+1,1,"Bachelor's or higher",25,"Other / not registered",0.667892758341638
+0,0,"Bachelor's or higher",63,"Democrat",0.559264603407522
+0,1,"Bachelor's or higher",49,"Democrat",0.546690573023945
+1,1,"Below bachelor's",39,"Other / not registered",0.737050445394663
+0,1,"Below bachelor's",77,"Democrat",0.31199898554416
+1,1,"Below bachelor's",19,"Other / not registered",1.21231540987896
+1,0,"Below bachelor's",64,"Democrat",0.448091750981157
+1,0,"Below bachelor's",26,"Democrat",1.75292621175658
+0,0,"Bachelor's or higher",23,"Other / not registered",1.53658913222078
+1,0,"Below bachelor's",68,"Democrat",1.53772145677126
+0,1,"Bachelor's or higher",25,"Democrat",0.749128101043176
+0,1,"Bachelor's or higher",58,"Democrat",0.552845987844587
+0,0,"Bachelor's or higher",56,"Other / not registered",0.626490843809452
+0,1,"Below bachelor's",20,"Democrat",1.67057769009179
+0,1,"Bachelor's or higher",48,"Other / not registered",0.550546766911616
+1,1,"Bachelor's or higher",61,"Democrat",0.186872450793748
+1,1,"Bachelor's or higher",32,"Republican",2.44847418660318
+0,1,"Bachelor's or higher",39,"Democrat",0.285580751405901
+1,1,"Below bachelor's",34,"Other / not registered",2.68739731317416
+0,0,"Bachelor's or higher",77,"Other / not registered",0.489486696987982
+0,0,"Bachelor's or higher",56,"Democrat",1.1230021889572
+1,1,"Bachelor's or higher",49,"Republican",0.526011494812933
+1,0,"Bachelor's or higher",67,"Republican",0.724381910517168
+0,1,"Bachelor's or higher",32,"Republican",0.6171347726656
+0,1,"Below bachelor's",62,"Democrat",0.825428737823864
+0,0,"Bachelor's or higher",74,"Democrat",0.303883983394674
+1,0,"Bachelor's or higher",46,"Democrat",0.271220887016915
+1,1,"Below bachelor's",52,"Other / not registered",2.42690544850437
+0,0,"Bachelor's or higher",54,"Other / not registered",1.72114747411462
+0,0,"Bachelor's or higher",53,"Democrat",0.490450720035408
+1,1,"Bachelor's or higher",47,"Other / not registered",0.606184393929831
+0,1,"Below bachelor's",20,"Democrat",3.08088893356909
+0,1,"Bachelor's or higher",37,"Republican",0.550916064705664
+0,1,"Bachelor's or higher",50,"Other / not registered",0.686277148055898
+0,0,"Bachelor's or higher",64,"Other / not registered",3.32933004895138
+1,0,"Bachelor's or higher",42,"Other / not registered",2.41496580921359
+1,0,"Bachelor's or higher",37,"Democrat",0.758989867804633
+0,0,"Below bachelor's",40,"Democrat",0.290104657108935
+1,0,"Bachelor's or higher",60,"Other / not registered",0.372535214786963
+1,1,"Below bachelor's",35,"Republican",1.45650212817112
+1,1,"Bachelor's or higher",49,"Democrat",0.490450720035408
+0,0,"Bachelor's or higher",53,"Democrat",0.575763153022425
+0,0,"Bachelor's or higher",47,"Other / not registered",0.849640829883751
+0,0,"Below bachelor's",58,"Other / not registered",0.471023328526991
+1,1,"Bachelor's or higher",80,"Other / not registered",0.960355740157344
+0,1,"Bachelor's or higher",37,"Democrat",0.856817533913742
+1,0,"Below bachelor's",22,"Other / not registered",2.56554338081324
+1,1,"Bachelor's or higher",32,"Democrat",1.53556738684582
+1,0,"Below bachelor's",63,"Republican",0.542918895629684
+1,0,"Below bachelor's",55,"Other / not registered",0.324972586559398
+0,1,"Below bachelor's",18,"Democrat",3.94854968447968
+0,1,"Bachelor's or higher",34,"Democrat",2.56854500902711
+1,1,"Bachelor's or higher",55,"Republican",0.236565923176307
+0,1,"Bachelor's or higher",34,"Democrat",2.79116351874933
+0,1,"Below bachelor's",22,"Other / not registered",0.705852786730963
+1,1,"Bachelor's or higher",70,"Other / not registered",0.245184520514659
+1,0,"Bachelor's or higher",82,"Other / not registered",0.565391553951511
+0,1,"Below bachelor's",33,"Democrat",1.13770388769117
+1,0,"Bachelor's or higher",37,"Republican",1.71649563734204
+0,1,"Bachelor's or higher",47,"Other / not registered",0.418301330407675
+1,0,"Bachelor's or higher",79,"Republican",0.673882865347339
+0,0,"Bachelor's or higher",33,"Democrat",1.15014785759946
+0,1,"Below bachelor's",36,"Democrat",0.584915266413914
+1,1,"Below bachelor's",41,"Democrat",1.13005947636259
+1,0,"Bachelor's or higher",75,"Republican",0.152367977284101
+1,1,"Bachelor's or higher",75,"Democrat",0.345818997555119
+0,1,"Bachelor's or higher",38,"Democrat",1.3911480128186
+0,1,"Below bachelor's",79,"Democrat",0.502496370909423
+0,0,"Bachelor's or higher",49,"Other / not registered",0.644720016523034
+1,1,"Bachelor's or higher",39,"Other / not registered",0.234986094193398
+0,1,"Below bachelor's",22,"Other / not registered",1.24854783165886
+1,1,"Bachelor's or higher",62,"Republican",0.153835420584073
+1,0,"Below bachelor's",49,"Republican",1.32678412995248
+1,0,"Bachelor's or higher",58,"Other / not registered",1.21603639830128
+0,0,"Bachelor's or higher",67,"Republican",0.183618804483929
+1,0,"Bachelor's or higher",73,"Democrat",1.51936978422132
+0,0,"Below bachelor's",56,"Other / not registered",0.220520465766051
+0,0,"Below bachelor's",73,"Democrat",1.75273656497682
+0,1,"Below bachelor's",60,"Other / not registered",0.178438829537613
+0,1,"Bachelor's or higher",39,"Other / not registered",2.41118096052194
+0,1,"Bachelor's or higher",32,"Democrat",0.603876572844973
+1,0,"Below bachelor's",53,"Republican",0.451975017940867
+1,1,"Bachelor's or higher",36,"Democrat",0.973046742908215
+1,0,"Below bachelor's",52,"Democrat",1.08266155324582
+1,1,"Bachelor's or higher",45,"Other / not registered",0.885315928851775
+0,1,"Bachelor's or higher",26,"Democrat",0.885141097234758
+1,1,"Bachelor's or higher",47,"Democrat",1.0136716194887
+0,1,"Below bachelor's",51,"Other / not registered",0.288643050812091
+1,1,"Bachelor's or higher",62,"Republican",0.756933401143511
+1,0,"Below bachelor's",79,"Republican",0.270521130774689
+1,1,"Below bachelor's",70,"Democrat",0.546163042654637
+0,1,"Bachelor's or higher",40,"Democrat",0.33348762563868
+1,0,"Below bachelor's",57,"Republican",0.853279933635217
+0,1,"Below bachelor's",23,"Other / not registered",0.71612799525965
+0,1,"Below bachelor's",24,"Democrat",0.794173440607464
+1,0,"Bachelor's or higher",55,"Other / not registered",0.47035581225331
+0,1,"Bachelor's or higher",67,"Democrat",0.217224034462353
+1,0,"Bachelor's or higher",68,"Republican",0.545302566146155
+1,1,"Bachelor's or higher",47,"Democrat",0.549030943860326
+0,1,"Bachelor's or higher",28,"Democrat",1.05021504079729
+1,0,"Below bachelor's",32,"Republican",1.65847188929501
+1,0,"Bachelor's or higher",59,"Republican",0.63931139924829
+1,1,"Bachelor's or higher",54,"Democrat",1.0136716194887
+1,0,"Below bachelor's",65,"Republican",1.86068295788451
+1,0,"Below bachelor's",57,"Republican",0.857762384308528
+0,0,"Bachelor's or higher",40,"Democrat",0.285580751405901
+1,0,"Bachelor's or higher",40,"Other / not registered",1.14429373598087
+1,0,"Bachelor's or higher",42,"Other / not registered",0.908665292739193
+1,0,"Below bachelor's",57,"Republican",0.584530642122665
+0,1,"Below bachelor's",38,"Democrat",1.97351191523787
+1,1,"Bachelor's or higher",64,"Republican",0.253292020537049
+1,0,"Bachelor's or higher",74,"Other / not registered",0.748317216154846
+1,0,"Below bachelor's",55,"Republican",0.978855564215237
+0,0,"Bachelor's or higher",70,"Other / not registered",0.286962798740166
+1,1,"Bachelor's or higher",36,"Other / not registered",0.893547891305648
+1,0,"Bachelor's or higher",70,"Democrat",1.80160229748128
