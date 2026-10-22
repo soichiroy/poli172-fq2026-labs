@@ -1,0 +1,462 @@
+---
+title: "Lab 4: Predicting Attitudes with Linear Regression"
+subtitle: "POLI 172 - Advanced Social Data Analytics"
+date: "2026-10-22"
+date-format: "MMMM D, YYYY"
+format: pdf
+pdf-engine: xelatex
+keep-tex: false
+fontsize: "11pt"
+geometry: "margin=0.85in"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: false
+  cache: false
+  freeze: false
+---
+
+<!-- Instructor authoring: generated question version from lab04-solutions.qmd; edit the answer master and regenerate. Learners may edit their own question copy. -->
+
+
+**Name:** [Your name]\
+**PID:** [Your PID]\
+**Group members:** [Names]
+
+Work with your group during Thursday's lab. Complete the remaining work by
+**Friday, October 23, 2026, at 11:59 p.m.** Use **DSS chapter 4** and the Week 4
+lecture.
+
+# Context and data
+
+How well does a person's earlier attitude predict their later attitude?
+Kalla and Broockman (2022)[^kalla] studied whether televised issue ads change
+opinions. In February 2020, they surveyed registered voters in California,
+Colorado, Michigan, North Carolina, Tennessee, and Wisconsin. Each household
+was then randomly assigned to three weeks of television ads (March 2-23, 2020)
+about either immigration or nondiscrimination toward gay and transgender
+people. A follow-up survey began as the ad campaign ended.
+
+Both surveys asked respondents to rate "someone who is an illegal immigrant"
+(the survey's wording) on a feeling thermometer from 0 to 100 degrees.
+Ratings between 50 and 100 mean warm and favorable feelings, ratings between
+0 and 50 mean cold and unfavorable feelings, and 50 means neither warm nor
+cold. This week's main question is about prediction: if we know a person's
+rating in February, how well can we predict their rating about a month later?
+Part 4 then brings in the randomly assigned ads.
+
+Each row of `tv-ads-survey.csv` is one respondent who completed both surveys.
+
+| Variable | Meaning |
+|---------------|-------------------------------------------------------------|
+| `baseline` | Thermometer rating (0-100) in the February 2020 survey, before any ad aired. |
+| `followup` | Thermometer rating (0-100) in the follow-up survey in late March 2020. |
+| `imm_ad` | 1 if the household was assigned an immigration ad, 0 if assigned the LGBTQ nondiscrimination ad. |
+| `state` | State of residence. |
+
+# Part 1: Fit a line to one sample
+
+Add code and brief interpretations, completing prerequisites first. All
+exercise chunks run when you render. Keep chunk labels and check your PDF.
+
+```{r}
+#| label: provided-data
+#| eval: true
+survey <- read.csv("tv-ads-survey.csv")
+```
+
+## Exercise 1.1: Inspect the data
+
+Use `nrow(survey)` and `head(survey, 3)` to inspect the file. Then run
+`summary(survey$baseline)` and `summary(survey$followup)` to see the lowest,
+median, and highest ratings. Report the number of respondents. Are the two
+ratings measured on the same scale?
+
+```{r}
+#| label: inspect-survey
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+We begin with a random sample of 100 respondents rather than the whole file,
+and return to the whole file in Part 3. The supplied code selects the sample.
+`set.seed()` makes the draw reproducible.
+
+```{r}
+#| label: provided-one-sample
+#| eval: true
+set.seed(172)
+# Sample 100 respondents at random
+rows <- sample(1:nrow(survey), size = 100, replace = FALSE)
+one_sample <- survey[rows, ]
+```
+
+## Exercise 1.2: Plot the sample
+
+Draw a scatterplot of `one_sample` with the baseline rating on the horizontal
+axis and the follow-up rating on the vertical axis, using
+`plot(x = one_sample$baseline, y = one_sample$followup)`. Label the axes
+"Baseline rating (degrees)" and "Follow-up rating (degrees)".
+Describe the direction of the relationship in one sentence. Do the points
+fall exactly on a line?
+
+```{r}
+#| label: sample-scatterplot
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 1.3: Fit the least-squares line
+
+Use `lm()` to fit the line that predicts `followup` from `baseline` in
+`one_sample`. Store the result as `fit` and display `coef(fit)`. R chooses
+the intercept and slope by least squares. Part 2 checks what that means.
+
+```{r}
+#| label: sample-fit
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+**A.** Write the fitted line $\widehat{Y} = \widehat\alpha + \widehat\beta X$
+with the two estimated numbers, then interpret the intercept in words. Is a
+baseline rating of 0 a value that occurs in the data?
+(`sum(one_sample$baseline == 0)` counts the sampled respondents with that
+rating.)
+
+[Your answer here]
+
+**B.** Interpret the slope in words, including its units. What is the
+predicted difference in follow-up ratings between two respondents whose
+baseline ratings differ by 10 degrees?
+
+[Your answer here]
+
+## Exercise 1.4: Predict from the fitted line
+
+Use `predict(fit, newdata = data.frame(baseline = c(20, 70)))` to predict
+the follow-up ratings for a baseline rating of 20 and of 70. Store the two
+predictions as `preds`. Report both predictions and their difference, and
+check that the difference equals 50 times the slope.
+
+```{r}
+#| label: sample-prediction
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+# Part 2: How least squares chooses the line
+
+Any intercept $a$ and slope $b$ define a candidate line. For respondent $i$,
+the candidate line predicts $a + bX_i$, and the residual is the observed
+outcome minus that prediction:
+$$e_i = Y_i - (a + bX_i).$$
+The sum of squared residuals adds the squared residuals over all $n = 100$
+respondents in the sample:
+$$\text{SSR} = \sum_{i=1}^{n} e_i^2 = e_1^2 + e_2^2 + \cdots + e_{100}^2.$$
+Least squares chooses the $a$ and $b$ that make this sum as small as
+possible. `lm()` did that for us in Exercise 1.3. To see what the choice
+means, we compute the sum ourselves for a few candidate lines and compare
+them with the least-squares line.
+
+Start with the simplest candidate: ignore the baseline rating and predict the
+sample mean of `followup` for everyone. This flat line has intercept
+`mean(one_sample$followup)` and slope 0. The supplied code computes its
+predictions, its residuals, and its sum of squared residuals. Read it line by
+line, because the next two exercises reuse it with different values of `a`
+and `b`.
+
+```{r}
+#| label: provided-candidate
+#| eval: true
+# Candidate line 1: the sample mean for everyone (slope 0)
+a <- mean(one_sample$followup)
+b <- 0
+predicted <- a + b * one_sample$baseline      # one prediction per respondent
+residual <- one_sample$followup - predicted   # observed minus predicted
+head(data.frame(baseline = one_sample$baseline,
+                followup = one_sample$followup,
+                predicted = predicted, residual = residual), 4)
+ssr_flat <- sum(residual^2)                   # sum of squared residuals
+ssr_flat
+```
+
+`predicted` holds one prediction per respondent, here the same number for
+everyone, and `residual` holds the 100 residuals. The table shows the first
+four respondents. `residual^2` squares every residual, and `sum()` adds the
+squares. The displayed total is the sum of squared residuals of the flat line.
+
+## Exercise 2.1: Predict the same rating as before
+
+The second candidate uses the baseline rating in the simplest possible way:
+it predicts that each respondent's follow-up rating equals their baseline
+rating. That line has intercept 0 and slope 1. Copy the supplied code,
+replace `a` and `b`, and store the sum of squared residuals as `ssr_nochange`.
+Display `ssr_flat` and `ssr_nochange` together. Which candidate predicts
+better, and by roughly what fraction does the sum of squared residuals fall?
+What does the comparison say about the information in the baseline rating?
+
+```{r}
+#| label: no-change-ssr
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 2.2: The least-squares line
+
+Now use the least-squares coefficients from Exercise 1.3 as the candidate:
+`alpha_hat <- coef(fit)[1]` and `beta_hat <- coef(fit)[2]`. Compute the
+predictions and residuals as before and store the sum of squared residuals as
+`ssr_ls`. Display the three sums together with
+`c(flat = ssr_flat, no_change = ssr_nochange, least_squares = ssr_ls)`.
+R stores the least-squares residuals in `residuals(fit)`, so
+`sum(residuals(fit)^2)` should match `ssr_ls`.
+
+Then choose any intercept and slope you like, compute the sum of squared
+residuals for your own line, and store it as `ssr_own`. Is any line below the
+least-squares value? Explain why that cannot happen.
+
+```{r}
+#| label: least-squares-ssr
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+## Exercise 2.3: Draw the candidate lines
+
+Repeat the scatterplot from Exercise 1.2 and add the three lines.
+`abline(h = mean(one_sample$followup), lty = 3)` draws a horizontal line at
+that height. `abline(a = 0, b = 1, lty = 2)` draws the line with intercept
+`a` and slope `b`. `abline(fit, lwd = 2, col = "navy")` draws the
+least-squares line stored in `fit`. The supplied `legend()` call below
+labels them:
+
+```r
+legend("bottomright", legend = c("Flat", "No change", "Least squares"),
+       lty = c(3, 2, 1), lwd = c(1, 1, 2), col = c("black", "black", "navy"))
+```
+
+Where does the least-squares line sit relative to the other two? Use its
+intercept and slope to describe what it predicts for respondents with very
+cold and very warm baseline ratings.
+
+```{r}
+#| label: candidate-lines-plot
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+# Part 3: Samples and the population line
+
+Exercise 1.3 used one sample of 100 respondents. A different sample would
+give a different intercept and slope. To study this, we treat all
+respondents in `survey` as our population. The line fitted to the entire
+population is the target, with intercept $\alpha$ and slope $\beta$. A line
+fitted to a sample estimates it, with $\widehat\alpha$ and $\widehat\beta$.
+
+```{r}
+#| label: provided-population
+#| eval: true
+population <- survey
+```
+
+## Exercise 3.1: Establish the known target
+
+Fit the population line with `pop_fit <- lm(followup ~ baseline, data = population)`
+and display `coef(pop_fit)`. Store the population intercept as
+`alpha <- coef(pop_fit)[1]` and the population slope as
+`beta <- coef(pop_fit)[2]`. How far is the sample slope from Exercise 1.3
+from the population slope? Which of the two is the target and which is the
+estimate?
+
+```{r}
+#| label: population-line
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 3.2: Plot the sampling distributions
+
+The supplied code repeats the Part 1 procedure 1,000 times: draw 100
+respondents, fit the line, and keep its two coefficients. `replicate()`
+stores the two coefficients from each repetition as one column of a matrix,
+so `estimates` has 2 rows and 1,000 columns. The last two lines pull out the
+row of intercepts and the row of slopes.
+
+```{r}
+#| label: provided-repeated-samples
+#| eval: true
+set.seed(173)
+B <- 1000
+estimates <- replicate(B, {
+  # Draw 100 respondents at random from the population
+  rows <- sample(1:nrow(population), size = 100, replace = FALSE)
+  # Fit the line using only this sample and keep its coefficients
+  coef(lm(followup ~ baseline, data = population[rows, ]))
+})
+intercepts <- estimates[1, ]   # one intercept per sample
+slopes <- estimates[2, ]       # one slope per sample
+```
+
+Draw a histogram of `slopes` and a histogram of `intercepts` side by side.
+Use `par(mfrow = c(1, 2))` before the first histogram and
+`par(mfrow = c(1, 1))` after the second. Label the horizontal axes
+"Estimated slope" and "Estimated intercept". Add a vertical line at the
+population value with `abline(v = beta)` and `abline(v = alpha)`.
+
+What does one value in `slopes` represent? Describe where each histogram is
+centered and how much the estimates vary.
+
+```{r}
+#| label: coefficient-histograms
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 3.3: Interpret unbiasedness
+
+Calculate `mean(slopes)` and compare it with `beta`. Do the same for
+`mean(intercepts)` and `alpha`. Then explain the statement
+$$\mathbb{E}[\widehat\beta] = \beta.$$
+Your answer should identify what changes across repetitions and what stays
+fixed. Does any single sample's slope have to equal $\beta$?
+
+```{r}
+#| label: interpret-unbiasedness
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+## Exercise 3.4: Change the sample size
+
+What happens with samples of 400 respondents instead of 100? Copy the
+repeated-sampling code, change `size = 100` to `size = 400`, use
+`set.seed(175)`, and keep `B = 1000`. Store the result as `estimates_large`
+and extract `slopes_large <- estimates_large[2, ]`.
+
+Compare `mean(slopes)`, `mean(slopes_large)`, and `beta`. Then compare
+`sd(slopes)` with `sd(slopes_large)`, and draw the two slope histograms with
+the same horizontal axis (`xlim = range(slopes)`). Which distribution is more
+concentrated around $\beta$? Does increasing the sample size change whether
+the estimates center on the population slope?
+
+```{r}
+#| label: larger-sample-comparison
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+# Part 4: Add the ad assignment
+
+So far we have predicted the follow-up rating from the baseline rating alone.
+The data also record the experiment's treatment: each household was randomly
+assigned to immigration ads (`imm_ad = 1`) or to the LGBTQ nondiscrimination
+ad (`imm_ad = 0`). Adding this indicator as a second predictor gives the
+fitted model
+$$\widehat{Y}_i = \widehat\alpha + \widehat\beta X_i + \widehat\gamma\,\text{Ad}_i,$$
+where $\text{Ad}_i$ is 1 for the immigration-ad group and 0 otherwise. The
+model describes two lines with the same slope $\widehat\beta$. The LGBTQ-ad
+line has intercept $\widehat\alpha$, and the immigration-ad line has intercept
+$\widehat\alpha + \widehat\gamma$. At any baseline rating, the vertical gap
+between the two lines is $\widehat\gamma$.
+
+## Exercise 4.1: Fit the model with two predictors
+
+Use `table(one_sample$imm_ad)` to count the two ad groups in the sample.
+Then fit `multiple <- lm(followup ~ baseline + imm_ad, data = one_sample)`
+and display `coef(multiple)`. Write the two fitted lines. Interpret the
+coefficient on `imm_ad` as a predicted difference in follow-up ratings, in
+degrees, between two respondents with the same baseline rating.
+
+```{r}
+#| label: ad-model
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 4.2: Draw the two lines and read the gap
+
+Draw the sample scatterplot again, coloring the two groups differently with
+`col = ifelse(one_sample$imm_ad == 1, "darkorange", "navy")`. Add the two
+fitted lines with `abline(a = , b = )`: the LGBTQ-ad line uses
+`coef(multiple)[1]` as its intercept, the immigration-ad line uses
+`coef(multiple)[1] + coef(multiple)[3]`, and both use `coef(multiple)[2]`
+as the slope. The supplied `legend()` call labels the groups:
+
+```r
+legend("bottomright", legend = c("LGBTQ ad", "Immigration ad"),
+       col = c("navy", "darkorange"), pch = 19, lty = 1)
+```
+
+What does the vertical gap between the two lines represent? The ads were
+randomly assigned, so the two groups are comparable on average, as in the
+Week 2 experiments. What does the gap estimate, and how large is it on the
+0-100 scale?
+
+```{r}
+#| label: ad-lines-plot
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 4.3: Estimate the gap in the population
+
+Fit the same model with `data = population`, store it as `pop_multiple`, and
+display its coefficients. Compare the population gap with the sample gap from
+Exercise 4.1. What do you conclude about the effect of the immigration ads on
+this rating?
+
+```{r}
+#| label: ad-population
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+
+[^kalla]: Kalla, Joshua L., and David E. Broockman. 2022. "'Outside
+Lobbying' over the Airwaves: A Randomized Field Experiment on Televised
+Issue Ads." *American Political Science Review* 116(3): 1126-1132.
+[Article](https://doi.org/10.1017/S0003055421001349).
