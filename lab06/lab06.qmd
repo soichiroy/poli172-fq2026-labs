@@ -1,0 +1,397 @@
+---
+title: "Lab 6: Refugee Arrivals and Far-Right Voting"
+subtitle: "POLI 172 - Advanced Social Data Analytics"
+date: "2026-11-05"
+date-format: "MMMM D, YYYY"
+format: pdf
+pdf-engine: xelatex
+keep-tex: false
+fontsize: "11pt"
+geometry: "margin=0.85in"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: false
+  cache: false
+  freeze: false
+---
+
+<!-- Instructor authoring: generated question version from lab06-solutions.qmd; edit the answer master and regenerate. Learners may edit their own question copy. -->
+
+
+**Name:** [Your name]\
+**PID:** [Your PID]\
+**Group members:** [Names]
+
+Work with your group during Thursday's lab. Complete the remaining work by
+**Friday, November 6, 2026, at 11:59 p.m.** Use **DSS chapter 5** and the Week 6
+lecture.
+
+# Context and data
+
+Does seeing a refugee crisis up close increase support for the far right?
+Dinas et al. (2019)[^dinas] study this question on the Greek islands. About
+400,000 asylum seekers reached Greece between April and September 2015, many of
+them by boat from Turkey to the Aegean islands. Most moved on within about two
+days. Which islands saw them depended largely on distance from Turkey. Lesvos,
+with about 80,000 residents, saw more than 200,000 arrivals from May to September
+2015, while neighboring Lemnos saw none.
+
+Greece held four parliamentary elections between 2012 and 2015: May 2012, June
+2012, January 2015, and September 2015. The January 2015 election came before the
+large arrivals, and the September 2015 election came right after the first wave.
+We focus on Golden Dawn, an extreme-right, anti-immigrant party. 
+
+
+In this week's lab, we examine whether receiving refugees raised Golden Dawn's vote share on the
+islands that received them.
+Each row of `greek-islands.csv` is one municipality on a Greek island. Large
+islands such as Crete contain several. Vote shares are percentages of valid votes,
+so differences between them are in percentage points.
+
+| Variable | Meaning |
+|----------------------------------|--------------------------------------------|
+| `municipality` | Name of the island municipality. |
+| `treated` | 1 if it received refugees before the September 2015 election, 0 otherwise. |
+| `gd_may12`, `gd_jun12`, `gd_jan15`, `gd_sep15` | Golden Dawn's vote share (%) in each election. |
+| `nd_may12`, `nd_jun12`, `nd_jan15`, `nd_sep15` | New Democracy's vote share (%) in each election. |
+
+# Part 1: Two simple comparisons
+
+Add code and brief interpretations, completing prerequisites first. All
+exercise chunks run when you render. Keep chunk labels and check your PDF.
+
+```{r}
+#| label: provided-data
+#| eval: true
+islands <- read.csv("greek-islands.csv")
+```
+
+## Exercise 1.1: Inspect the data
+
+Use `nrow(islands)` and `head(islands, 3)` to inspect the file. Use
+`table(islands$treated)` to count the two groups, and
+`islands$municipality[islands$treated == 1]` to list the treated municipalities.
+How many municipalities are in each group? What does one row represent?
+
+```{r}
+#| label: inspect-islands
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 1.2: State the target
+
+Let $X_i = 1$ if municipality $i$ received refugees and $X_i = 0$ otherwise, and
+let $Y_i$ be Golden Dawn's vote share in September 2015. We want the average effect
+on the municipalities that received refugees:
+$$\text{ATT} = \frac{1}{n_1}\sum_{i:\,X_i = 1}\left[Y_i(1) - Y_i(0)\right].$$
+
+**A.** For Lesvos, explain in words what $Y_i(1)$ and $Y_i(0)$ mean. Which of the
+two can we observe?
+
+[Your answer here]
+
+**B.** Explain the ATT in words. What is the value of $n_1$ here?
+
+[Your answer here]
+
+## Exercise 1.3: Compare the groups in September 2015
+
+Store `tapply(islands$gd_sep15, islands$treated, mean)` as `sep_means` to get Golden
+Dawn's mean share in each group. The result is labeled by group, so `sep_means["1"]`
+picks the treated mean. Store the treated mean minus the control mean as `naive_gap`.
+
+Can we read this gap as the effect of the arrivals? Explain, and name one specific
+way the treated islands might differ from the others that could also affect
+Golden Dawn's vote.
+
+```{r}
+#| label: naive-comparison
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 1.4: Compare before and after
+
+Now use only the treated municipalities. Calculate their mean `gd_jan15` and mean
+`gd_sep15`, using indexing such as `islands$gd_sep15[islands$treated == 1]`. Store
+the September mean minus the January mean as `treat_change`.
+
+Both 2015 elections fell during a severe financial crisis. Greek banks closed in
+late June, and voters decided a bailout referendum in July. Can we read this change
+as the effect of the arrivals? Give one reason why it may not be.
+
+```{r}
+#| label: before-after
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+# Part 2: Difference-in-differences
+
+The control municipalities went through the same national events without receiving
+refugees. If the two groups would otherwise have changed by the same amount, the
+control group's change can stand in for what would have happened on the treated
+islands. With January 2015 as *before* and September 2015 as *after*, the
+difference-in-differences estimator is
+$$\widehat{\text{ATT}} = \underbrace{\left(\overline{Y}^{\text{after}}_{\text{treated}} - \overline{Y}^{\text{before}}_{\text{treated}}\right)}_{\text{change for treated}} - \underbrace{\left(\overline{Y}^{\text{after}}_{\text{control}} - \overline{Y}^{\text{before}}_{\text{control}}\right)}_{\text{change for control}},$$
+where, for example, $\overline{Y}^{\text{after}}_{\text{treated}} = \frac{1}{n_1}\sum_{i:\,X_i = 1} Y_i^{\text{after}}$
+is the mean September 2015 share across treated municipalities.
+
+## Exercise 2.1: Build the two-by-two table
+
+Compute `mean_before <- tapply(islands$gd_jan15, islands$treated, mean)`, and
+compute `mean_after` the same way for `gd_sep15`. Put them in one table with
+
+```r
+data.frame(treated = 0:1, mean_before, mean_after,
+           change = mean_after - mean_before, row.names = NULL)
+```
+
+How did Golden Dawn's mean share change in each group?
+
+```{r}
+#| label: did-table
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 2.2: Plot the observed outcomes
+
+Now plot these means. This code draws the control group in the two elections:
+
+```r
+plot(x = 1:2, y = c(mean_before["0"], mean_after["0"]), type = "b", pch = 19,
+     col = "navy", xlim = c(0.5, 2.5), ylim = c(0, 10), xaxt = "n",
+     xlab = "Election", ylab = "Golden Dawn vote share (%)")
+axis(1, at = 1:2, labels = c("Jan 2015", "Sep 2015"))
+```
+
+`type = "b"` draws both points and lines. `xaxt = "n"` removes the default axis so
+that `axis()` can add the election names. Copy this code, then add the treated group
+with `lines(x = 1:2, y = ..., type = "b", pch = 17, col = "darkorange")`, replacing
+the dots with the treated group's two means. Finish with this legend:
+
+```r
+legend("bottomleft", legend = c("Control", "Treated"),
+       col = c("navy", "darkorange"), lty = 1, pch = c(19, 17), bty = "n", cex = 0.8)
+```
+
+Which group starts higher, and which rises more? Does this plot alone tell us the
+effect of the arrivals?
+
+```{r}
+#| label: observed-plot
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 2.3: Estimate the ATT
+
+Store the control group's change as `ctrl_change`, then compute
+`att_hat <- treat_change - ctrl_change`.
+
+```{r}
+#| label: did-estimate
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+**A.** Interpret $\widehat{\text{ATT}}$ in one or two sentences, including its units
+and the comparison it makes.
+
+[Your answer here]
+
+**B.** State the parallel trends assumption for this setting in your own words. Which
+part of it can we never observe?
+
+[Your answer here]
+
+## Exercise 2.4: Add the estimated counterfactual
+
+We never observe $Y_i(0)$ for the treated municipalities in September 2015. Under
+parallel trends, we can estimate its average across those municipalities:
+$$\overline{Y}^{\text{counterfactual}}_{\text{treated}} = \overline{Y}^{\text{before}}_{\text{treated}} + \left(\overline{Y}^{\text{after}}_{\text{control}} - \overline{Y}^{\text{before}}_{\text{control}}\right).$$
+Compute this as `treated_cf`. Then draw your plot from Exercise 2.2 again and add the
+estimate with the code below, using this legend in place of the earlier one. The
+dashed segment is the treated group's estimated path without the arrivals, and the
+open triangle is the estimate itself.
+
+```r
+segments(x0 = 1, y0 = mean_before["1"], x1 = 2, y1 = treated_cf,
+         col = "darkorange", lty = 2)
+points(x = 2, y = treated_cf, pch = 2, col = "darkorange")
+legend("bottomleft", legend = c("Control", "Treated", "Treated, counterfactual"),
+       col = c("navy", "darkorange", "darkorange"), lty = c(1, 1, 2),
+       pch = c(19, 17, 2), bty = "n", cex = 0.8)
+```
+
+How does the dashed line relate to the control line, and why? What does the vertical
+distance between the two orange triangles in September 2015 represent?
+
+```{r}
+#| label: counterfactual-plot
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+# Part 3: Were the trends parallel before the arrivals?
+
+The assumption concerns a counterfactual, so the data cannot prove it. But the file
+has two earlier elections, so we can ask whether the two groups moved together
+before the arrivals. The supplied code lists the Golden Dawn columns in time order.
+
+```{r}
+#| label: provided-columns
+#| eval: true
+gd_columns <- c("gd_may12", "gd_jun12", "gd_jan15", "gd_sep15")
+election_names <- c("May 2012", "June 2012", "Jan 2015", "Sep 2015")
+```
+
+## Exercise 3.1: Compute the means in all four elections
+
+`colMeans()` takes the mean of each column. Use
+`gd_treated <- colMeans(islands[islands$treated == 1, gd_columns])` for the treated
+group, and write the same for the control group as `gd_control`. Display both
+groups and their gap with
+
+```r
+round(rbind(control = gd_control, treated = gd_treated,
+            gap = gd_treated - gd_control), 2)
+```
+
+Describe the gap in the three elections before the arrivals, and then in
+September 2015.
+
+```{r}
+#| label: trend-means
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 3.2: Add the earlier elections
+
+Extend your plot from Exercise 2.4 to all four elections, with these changes:
+
+- In `plot()`, use `x = 1:4` and `y = gd_control`, and remove `xlim`.
+- In `lines()`, use `x = 1:4` and `y = gd_treated`.
+- In `axis()`, use `at = 1:4` and `labels = election_names`.
+- The two 2015 elections are now at positions 3 and 4. In `segments()`, use `x0 = 3`,
+  `y0 = gd_treated[3]`, and `x1 = 4`. In `points()`, use `x = 4`.
+- Add `abline(v = 3.5, lty = 3)`, a dotted line that marks the arrivals.
+
+The elections are evenly spaced on this axis, but not in time: about six weeks separate
+the first two, then more than two years, then eight months.
+
+Do the two groups move together before the arrivals? Does that make the dashed path
+more or less believable, and why?
+
+```{r}
+#| label: trend-plot
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 3.3: Run a placebo test
+
+No large arrivals happened between June 2012 and January 2015. Apply the DiD formula
+to those two elections, treating June 2012 as *before* and January 2015 as *after*:
+
+```r
+placebo_did <- (gd_treated[3] - gd_treated[2]) - (gd_control[3] - gd_control[2])
+```
+
+R keeps a column label on the result, which you can ignore. Write the same
+calculation for May 2012 and June 2012 as `placebo_did2`, and display `placebo_did`,
+`placebo_did2`, and `att_hat`.
+
+```{r}
+#| label: placebo-test
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+**A.** If the groups were on parallel trends before the arrivals, what value should
+a placebo DiD take, and why? How do your two placebo DiDs compare with
+$\widehat{\text{ATT}}$?
+
+[Your answer here]
+
+**B.** Does a placebo DiD near 0 prove that parallel trends holds between January and
+September 2015? Explain.
+
+[Your answer here]
+
+
+# Part 4: A second outcome
+
+The arrivals might have moved other parties too. New Democracy is the main
+center-right party in Greece. Does the same check give the same reassurance? The
+supplied code lists its columns in time order.
+
+```{r}
+#| label: provided-nd-columns
+#| eval: true
+nd_columns <- c("nd_may12", "nd_jun12", "nd_jan15", "nd_sep15")
+```
+
+## Exercise 4.1: Repeat the analysis for New Democracy
+
+Compute `nd_treated` and `nd_control` as in Exercise 3.1, and display the two groups
+and their gap. Using the same pattern as Exercise 3.3, compute `nd_att` for January to
+September 2015, `nd_placebo` for June 2012 to January 2015, and `nd_placebo2` for May
+to June 2012.
+
+In one or two sentences, report each group's change from January to September 2015,
+the DiD, and the two placebo DiDs.
+
+```{r}
+#| label: nd-analysis
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+[Your answer here]
+
+## Exercise 4.2: Compare the two outcomes
+
+The New Democracy estimate is larger in absolute value than the Golden Dawn estimate.
+Which of the two is more credible as an effect of the arrivals? Use your placebo
+results in three or four sentences.
+
+[Your answer here]
+
+
+[^dinas]: Dinas, Elias, Konstantinos Matakos, Dimitrios Xefteris, and Dominik
+Hangartner. 2019. ["Waking Up the Golden Dawn: Does Exposure to the Refugee Crisis
+Increase Support for Extreme-Right Parties?"](https://doi.org/10.1017/pan.2018.48)
+*Political Analysis* 27(2): 244-254.
