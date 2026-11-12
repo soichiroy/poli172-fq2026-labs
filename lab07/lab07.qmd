@@ -1,0 +1,405 @@
+---
+title: "Lab 7: Probability Models of Elections"
+subtitle: "POLI 172 - Advanced Social Data Analytics"
+date: "2026-11-12"
+date-format: "MMMM D, YYYY"
+format: pdf
+pdf-engine: xelatex
+keep-tex: false
+fontsize: "11pt"
+geometry: "margin=0.85in"
+execute:
+  echo: true
+  warning: false
+  message: false
+  error: false
+  cache: false
+  freeze: false
+---
+
+<!-- Instructor authoring: generated question version from lab07-solutions.qmd; edit the answer master and regenerate. Learners may edit their own question copy. -->
+
+
+**Name:** [Your name]\
+**PID:** [Your PID]\
+**Group members:** [Names]
+
+Work with your group during Thursday's lab. Complete any remaining work by
+**Friday, November 13, 2026, at 11:59 p.m.** Use **DSS Chapter 6** and the [Week 7 lecture slides](https://drive.google.com/file/d/1pKlo--NIH0uF_d8q9kODwUNKCVc2Dfdu/view).
+
+This lab has no data file. Each part builds a simple probability model of an election
+and asks what it implies. Add code and brief answers where requested. Work in order,
+because later exercises use earlier results. All chunks run when you render the PDF.
+
+# Part 1: When does one vote decide an election?
+
+Why vote when one ballot almost never changes the result? Rational-choice theories of
+turnout start from the chance that a single vote is decisive. In a two-candidate race,
+your vote decides the winner only when the other voters split exactly evenly. (We
+ignore recounts and tie-breaking rules.)
+
+Suppose there are $n$ other voters, with $n$ even. Each votes for candidate A with
+probability $p$ and for candidate B otherwise, independently of the others. The number
+who choose A, $S$, has a binomial distribution:
+
+$$\Pr(S = k) = \binom{n}{k}\, p^k\, (1 - p)^{n - k}, \qquad k = 0, 1, \ldots, n.$$
+
+In R, `choose(n, k)` gives $\binom{n}{k}$, and `dbinom(k, size = n, prob = p)` gives
+the whole probability.
+
+## Exercise 1.1: A small election
+
+A student organization with 11 members elects its president. Besides you, ten members
+vote ($n = 10$), each equally likely to choose A or B ($p = 0.5$).
+
+**A.** Which value of $S$ makes your vote decisive? Write the event "your vote decides
+the election" in terms of $S$.
+
+[Your answer here]
+
+**B.** Calculate the probability of this event twice: with the formula above (using
+`choose()` and `^`) and with `dbinom()`. The answers should match. Then run
+`dbinom(0:10, size = 10, prob = 0.5)`, which gives $\Pr(S = k)$ for every $k$ from 0
+to 10.
+
+```{r}
+#| label: small-election
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+**C.** Which value of $S$ is most likely? Is a tie more likely than not?
+
+[Your answer here]
+
+
+## Exercise 1.2: Larger electorates
+
+Real electorates are much larger. For each size in `n_voters` below, calculate the
+probability of a tie with $p = 0.5$ (save it as `tie_50`) and with $p = 0.51$ (save it
+as `tie_51`). A tie still means $S = n/2$. `dbinom()` works on vectors, so one call
+covers all five sizes. For example, `dbinom(c(1, 2), size = c(2, 4), prob = 0.5)`
+gives $\Pr(S = 1)$ for $n = 2$ and $\Pr(S = 2)$ for $n = 4$.
+
+Display the results with `signif(tie_50, 3)` and `signif(tie_51, 3)`. `signif(x, 3)`
+keeps three significant digits, so very small probabilities stay visible, while
+`round(x, 3)` would turn them into 0. For example, `signif(0.0123456, 3)` is 0.0123.
+R prints tiny numbers in scientific notation: `3.2e-05` means $3.2 \times 10^{-5}$.
+
+```{r}
+#| label: electorate-size
+#| echo: true
+#| eval: true
+n_voters <- c(10, 100, 1000, 10000, 100000)
+# YOUR CODE HERE
+```
+
+**A.** When the electorate grows 100-fold, say from 100 to 10,000 voters, by about what
+factor does `tie_50` fall? Check with a division such as `tie_50[2] / tie_50[4]`.
+
+[Your answer here]
+
+
+**B.** Compare `tie_50` and `tie_51` at 10 and at 100,000 voters. In this model, why
+does a one-point lean barely matter in a small group but matter enormously in a large
+one? Hint: with $p = 0.51$, how many votes does A expect, and how far is that from a
+tie? You can also compare `dbinom(51000, size = 100000, prob = 0.51)` with the tie
+probability.
+
+[Your answer here]
+
+## Exercise 1.3: What happens in real elections?
+
+Mulligan and Hunter (2003)[^mh] measured how often single votes mattered in U.S.
+elections, counting a vote as mattering if it went to a candidate who tied or won by
+one vote. About 1 vote in 15,000 mattered in state legislative elections, and about 1
+in 89,000 in the larger congressional elections.
+
+**A.** Compare 1 in 15,000 (`1 / 15000`) with your tie probabilities for 10,000 voters,
+`tie_50[4]` and `tie_51[4]`. To write a probability as "1 in ...", divide 1 by it, as
+in `1 / tie_50[4]`.
+
+```{r}
+#| label: real-rate
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+Does the model with $p = 0.5$ overstate or understate how often a vote matters? What
+does it assume that real races do not satisfy? Hint: are most real races close to
+50–50?
+
+[Your answer here]
+
+**B.** Riker and Ordeshook (1968)[^riker] treat voting as a comparison of expected
+benefit and cost. Suppose your candidate's victory is worth \$10,000 to you and voting
+costs you \$20 of time. Let $G = 10{,}000$ if your vote decides the race and $G = 0$
+otherwise. Using the rates above as the probability that your vote decides the race,
+calculate $\mathbb{E}[G]$ for a state legislative race and for a congressional race.
+Multiply each value of $G$ by its probability and add.
+
+```{r}
+#| label: expected-gain
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+Does voting pay off in expectation? Many people vote anyway. What does the model leave
+out?
+
+[Your answer here]
+
+# Part 2: What does a poll lead tell us?
+
+Two candidates, A and B, compete for a state. Polls measure opinion before Election
+Day, and results rarely match the final polling average exactly. We model the actual
+margin $M$, candidate A's vote share minus candidate B's in percentage points, as a
+normal random variable. Its mean is A's lead in the final polls. Its SD of 4 points
+describes how far results typically land from the final polls. Misses of this size are
+common: state polls missed the final margin by close to 5 points on average in 2016 and
+2020. A wins the state when $M > 0$.
+
+`pnorm(q, mean = ..., sd = ...)` gives $\Pr(M \le q)$, the area to the left of $q$.
+Give it the SD, not the variance. For the area to the right, subtract from 1.
+
+## Exercise 2.1: Two random variables for one race
+
+Before Election Day, $M$ is a random variable. Let $W = 1$ if A wins and $W = 0$ if B
+wins.
+
+Are $M$ and $W$ discrete or continuous? Write the event "A wins" in terms of each.
+
+[Your answer here]
+
+## Exercise 2.2: A two-point lead
+
+A leads the final polls by 2 points, so $M \sim N(2, 4^2)$. Calculate A's chance of
+winning, $\Pr(M > 0)$, and save it as `p_win2`. This is also $\Pr(W = 1)$, the $p$ of
+the Bernoulli variable $W$. Then calculate $\mathbb{E}[W] = p$ and
+$\mathbb{V}[W] = p(1 - p)$.
+
+```{r}
+#| label: two-point-lead
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+A commentator says, "A's lead is smaller than the typical polling error, so the race
+is a toss-up." Evaluate this claim. What would $\mathbb{E}[W]$ and $\mathbb{V}[W]$ be
+in a true toss-up?
+
+[Your answer here]
+
+## Exercise 2.3: How large a lead is safe?
+
+A classmate says, "95% of a normal distribution lies within 1.96 SDs of its mean, so A
+needs a lead of $1.96 \times 4 = 7.84$ points for a 95% chance of winning." Check this
+in three steps.
+
+1. Calculate A's chance of winning with a 7.84-point lead. Is it 95%?
+2. The 95% rule leaves 2.5% of the area below $7.84 - 1.96 \times 4 = 0$ and 2.5% above
+   $7.84 + 1.96 \times 4 = 15.68$. Check both areas with `pnorm()`.
+3. Find the smallest lead in `leads` (0 to 10 points, in steps of 0.1) that gives at
+   least a 95% chance. `pnorm()` accepts a vector of means, so compute the chance for
+   every lead at once and save it as `win_chance`. Then `leads[win_chance >= 0.95]`
+   keeps the leads that reach 95%, and `min()` picks the smallest.
+
+```{r}
+#| label: safe-lead
+#| echo: true
+#| eval: true
+leads <- seq(0, 10, by = 0.1)
+# YOUR CODE HERE
+```
+
+**A.** Why is the chance with a 7.84-point lead not 95%? In which tail from step 2 does
+A lose?
+
+[Your answer here]
+
+**B.** What is the smallest lead with at least a 95% chance? Why is it smaller than
+7.84 points?
+
+[Your answer here]
+
+## Exercise 2.4: Two close races
+
+In State 1, A leads by 2 points and the polling error has SD 4. In State 2, A leads by
+only 1.5 points, but the polls are more accurate, with SD 2. Calculate A's chance of
+winning in each state.
+
+```{r}
+#| label: two-races
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+Where is A in a stronger position? Why can a smaller lead be safer? Hint: compare each
+lead with the SD in that state.
+
+[Your answer here]
+
+# Part 3: From states to the Electoral College
+
+A presidential candidate needs at least 270 of the 538 electoral votes. Suppose A is
+sure to win states worth 226 votes and B states worth 219. The other 93 votes belong to
+the seven battleground states of 2024, stored below with a hypothetical final polling
+lead for A (a negative lead means B leads). Each state follows the Part 2 model, and for
+now the seven margins are independent.
+
+```{r}
+#| label: provided-states
+#| eval: true
+states <- data.frame(
+  state = c("Arizona", "Georgia", "Michigan", "Nevada",
+            "North Carolina", "Pennsylvania", "Wisconsin"),
+  ev = c(11, 16, 15, 6, 16, 19, 10),
+  lead = c(-1.5, -1.0, 1.5, 0.5, -1.0, 0.5, 1.0)
+)
+states
+sum(states$ev)
+```
+
+
+## Exercise 3.1: Expected electoral votes
+
+Calculate A's chance of winning each state with one call to `pnorm()`, and save it as
+`states$p_win`.
+
+Let $X_{\text{AZ}}$ be A's electoral votes from Arizona: 11 with probability
+$p_{\text{AZ}}$ and 0 otherwise. Calculate its expectation and variance from the
+definitions below, then take the square root of the variance for the SD.
+$$\mathbb{E}[X] = \sum_x x \Pr(X = x), \qquad
+\mathbb{V}[X] = \sum_x (x - \mathbb{E}[X])^2 \Pr(X = x)$$
+
+Finally, calculate A's expected total with `sum()`. The expectation of a sum is the sum
+of the expectations (DSS p. 184), so
+$$\mathbb{E}[\text{A's electoral votes}] = 226 + \sum_{j} \text{ev}_j \times p_j.$$
+
+```{r}
+#| label: expected-ev
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+**A.** $X_{\text{AZ}}$ is either 0 or 11. What do its expectation and SD describe?
+
+[Your answer here]
+
+**B.** Let $T$ be A's total electoral votes. Is $T$ discrete or continuous? What are its
+smallest and largest possible values? Can it equal 227? Can it equal $\mathbb{E}[T]$?
+
+[Your answer here]
+
+## Exercise 3.2: Simulate the election
+
+The expected total does not tell us how likely A is to reach 270. That depends on the
+whole distribution of A's total, so we simulate it. `replicate(B, { ... })` runs the
+code in braces `B` times and keeps the last value of each run. Each run below is one
+election, and its first line draws all seven margins at once.
+
+Complete the last line so that each run returns A's total, including the 226 safe
+votes. `states$ev[margin > 0]` gives the electoral votes of the states A wins. Then
+report the mean and SD of `ev_A` and the share of runs with at least 270 votes. Draw
+the distribution with `hist(ev_A, breaks = seq(224, 320, by = 4), freq = FALSE)` and
+mark 270 with `abline(v = 270, lty = 2)`.
+
+```{r}
+#| label: simulate-election
+#| echo: true
+#| eval: true
+set.seed(2024)
+B <- 10000
+ev_A <- replicate(B, {
+  margin <- rnorm(7, mean = states$lead, sd = 4)
+  # YOUR CODE HERE
+})
+# YOUR CODE HERE
+```
+
+**A.** Compare the mean of `ev_A` with your expected total from 3.1. Which is a
+parameter of the model, and which is a statistic? Why do they differ slightly?
+
+[Your answer here]
+
+**B.** What is A's chance of winning? The expected total is above 270. Does that make A
+a safe favorite? Use the histogram and the SD.
+
+[Your answer here]
+
+
+# Part 4 (Optional): Do the states move together?
+
+In 2024, one candidate won all seven battleground states, and the final polls had
+underestimated that candidate in all seven. How surprising is such a sweep under our
+model, and what changes if polling errors are shared across states?
+
+## Exercise 4.1: The chance of a sweep
+
+Calculate the probability that A wins all seven states and the probability that B
+wins all seven. `prod()` multiplies the elements of a vector. Add the two to get the
+chance of a sweep by either candidate. Then check your answer with `ev_A`. Hint: by
+3.1B, what is A's total after a sweep by A, and after a sweep by B?
+
+```{r}
+#| label: sweep
+#| echo: true
+#| eval: true
+# YOUR CODE HERE
+```
+
+Why can you multiply the seven probabilities, and why can you add the two? Is a sweep
+likely under this model?
+
+[Your answer here]
+
+## Exercise 4.2: A shared polling error
+
+Polling errors tend to move together across states. Polls that miss one candidate's
+supporters in one state usually miss similar voters elsewhere. The code below splits
+each state's error into a national part, drawn once per election and shared by all
+seven states (SD 3), and a state part drawn separately for each state (SD
+$\sqrt{7} \approx 2.65$). Variances of independent errors add (DSS p. 185), so each
+margin is still normal with variance $9 + 7 = 16$ and SD 4. Each state's chance of
+winning is therefore the same as in Part 3.
+
+Run the code. For each model, calculate the mean and SD of A's electoral votes, A's
+chance of winning, and the chance of a sweep. Store them as `independent` and
+`shared` using `c(mean = ..., sd = ..., win = ..., sweep = ...)`, and display both with
+`round(rbind(independent, shared), 3)`.
+
+```{r}
+#| label: shared-error
+#| echo: true
+#| eval: true
+set.seed(2024)
+ev_A_shared <- replicate(B, {
+  national <- rnorm(1, mean = 0, sd = 3)           # shared by all seven states
+  state_error <- rnorm(7, mean = 0, sd = sqrt(7))  # one draw per state
+  margin <- states$lead + national + state_error
+  226 + sum(states$ev[margin > 0])
+})
+# YOUR CODE HERE
+```
+
+
+**A.** Which summaries barely change, and which change a lot? Explain both patterns
+using what the shared error does and does not change in each state.
+
+[Your answer here]
+
+**B.** Suppose a forecaster gave each battleground state a probability near 50%, and then
+one candidate swept all seven. Does the sweep show that those probabilities were wrong?
+Use your results from both models.
+
+[Your answer here]
+
+[^mh]: Mulligan, Casey B., and Charles G. Hunter. 2003. ["The Empirical Frequency of a Pivotal Vote."](https://doi.org/10.1023/A:1024244329828) *Public Choice* 116(1–2), 31–54.
+
+[^riker]: Riker, William H., and Peter C. Ordeshook. 1968. ["A Theory of the Calculus of Voting."](https://doi.org/10.2307/1953324) *American Political Science Review* 62(1), 25–42.
